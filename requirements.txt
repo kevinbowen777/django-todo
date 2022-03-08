@@ -1,0 +1,3 @@
+asgiref @ file:///home/kbowen/.cache/pypoetry/artifacts/71/66/fe/0268717622fd9cf036d2fb46b7ad84ad39e3776bc461ce21a4284f32d2/asgiref-3.5.0-py3-none-any.whl
+Django @ file:///home/kbowen/.cache/pypoetry/artifacts/d2/f7/2f/c0e702d1642fb474e7bca46dacd4112739640d4f02cdea4c8f1dd58b29/Django-4.0.3-py3-none-any.whl
+sqlparse @ file:///home/kbowen/.cache/pypoetry/artifacts/10/f5/22/c9c991a71e27c4d8f69907d92cce74a369cbb3183dc4a6d27e2ae4ab0b/sqlparse-0.4.2-py3-none-any.whl
