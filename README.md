@@ -2,21 +2,20 @@
 
 ---
 ## Features
- - TBD 
- - 
- - 
-
-### Live Demo on Heroku: 
- - TBD
-
-### Docker Container Image:
-
- - TBD
+ - Create, update and edit lists 
+ - Add, edit and delete list items
+ - Set due dates
 
 ---
 ## Screenshots
 
-### TBD
+### Home page
+
+![Home Page](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_home.png)
+
+![Add items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_add_new_images.png)
+
+![List Items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_list_items.png)
 
 
 
