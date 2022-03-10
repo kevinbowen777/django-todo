@@ -13,7 +13,7 @@
 
 ![Home Page](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_home.png)
 
-![Add items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_add_new_images.png)
+![Add items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_add_new_item.png)
 
 ![List Items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_list_items.png)
 
