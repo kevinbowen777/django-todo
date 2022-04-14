@@ -6,6 +6,12 @@
  - Add, edit and delete list items
  - Set due dates
 
+### Installation
+ - `git clone https://github.com/kevinbowen777/djangdo.git`
+ - Start virtualenv/ `workon djangdo`
+ - `python manage.py runserver`
+ - Open browser to http://127.0.0.1:8000
+
 ---
 ## Screenshots
 
