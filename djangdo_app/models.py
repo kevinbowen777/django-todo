@@ -1,7 +1,6 @@
-from django.utils import timezone
-
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 
 def one_week_hence():
@@ -26,9 +25,7 @@ class ToDoItem(models.Model):
     todo_list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
-        return reverse(
-            "item-update", args=[str(self.todo_list.id), str(self.id)]
-        )
+        return reverse("item-update", args=[str(self.todo_list.id), str(self.id)])
 
     def __str__(self):
         return f"{self.title}: due {self.due_date}"

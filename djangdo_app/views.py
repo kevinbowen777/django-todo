@@ -1,11 +1,7 @@
 from django.urls import reverse, reverse_lazy
-from django.views.generic import (
-    ListView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-)
-from .models import ToDoList, ToDoItem
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView
+
+from .models import ToDoItem, ToDoList
 
 
 class ListListView(ListView):
