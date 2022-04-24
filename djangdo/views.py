@@ -6,12 +6,12 @@ from .models import ToDoItem, ToDoList
 
 class ListListView(ListView):
     model = ToDoList
-    template_name = "djangdo_app/index.html"
+    template_name = "djangdo/index.html"
 
 
 class ItemListView(ListView):
     model = ToDoItem
-    template_name = "djangdo_app/todo_list.html"
+    template_name = "djangdo/todo_list.html"
 
     def get_queryset(self):
         return ToDoItem.objects.filter(todo_list_id=self.kwargs["list_id"])
