@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Third-party applications
+    "bootstrap4",
     "debug_toolbar",
     # Local applications
     "djangdo",
