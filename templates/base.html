@@ -6,21 +6,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name = "viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
   <title>Djangdo To-do Lists</title>
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"/>
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
 </head>
-
 <body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+    <a class="navbar-brand" href="{% url 'index' %}">Djangdo</a>
+  </nav>
   <div>
-    <h1 onclick="location.href='{% url "index" %}'">
+    <h2 onclick="location.href='{% url "index" %}'">
       Djangdo To-do Lists
-    </h1>
+    </h2>
   </div>
   <div>
-    {% block content %}
-    This content will be replaced by different html code for each page.
-    {% endblock %}
+  <main role="main" class="container">
+    <div class="pb-2 mb-2 border-bottom">
+      {% block page_header %}{% endblock page_header %}
+    </div>
+    <div>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </main>
   </div>
 </body>
 
