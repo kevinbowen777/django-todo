@@ -2,16 +2,10 @@
 
 {% block content %}
 <h3>Delete List</h3>
-<p>Are you sure you want to delete the list <i>{{ object.title }}</i>?</p>
-<form method="POST">
-  {% csrf_token %}
-  <input
-      value="Yes, delete."
-      type="submit">
-</form>
-<input
-    value="Cancel"
-    type="button"
-    onclick="location.href='{% url "index" %}';">
-
-{% endblock %}
+<p>Are you sure you want to delete the list <i><strong>{{ object.title }}</strong></i>?</p>
+  <form method="POST">
+    {% csrf_token %}
+    <button name="submit" class="btn btn-danger">Yes, delete.</button>
+    <a class="btn btn-success" href="{% url 'index' %}">Cancel</a>
+  </form>
+{% endblock content %}
