@@ -6,13 +6,8 @@
    from the list <i>{{ todo_list.title }}</i>?</p>
 <form method="POST">
   {% csrf_token %}
-  <input
-      value="Yes, delete."
-      type="submit">
+  <button class="btn btn-danger" type="submit">Yes, delete.</button>
+  <a class="btn btn-success" href="{% url 'list' todo_list.id %}">Cancel</a>
 </form>
-<input
-    value="Cancel"
-    type="button"
-    onclick="location.href='{% url "list" todo_list.id %}';">
 
-{% endblock %}
+{% endblock content %}
