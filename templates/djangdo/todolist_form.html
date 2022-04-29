@@ -8,13 +8,8 @@
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <input
-          value="Save"
-          type="submit">
-      <input
-          value="Cancel"
-          type="button"
-          onclick="location.href='{% url "index" %}';">
+      <button name="submit" class="btn btn-success">Save</button>
+      <a class="btn btn-info" href="{% url 'index' %}">Cancel</a>
     </form>
   </div>
 </div>
