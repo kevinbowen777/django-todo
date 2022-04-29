@@ -8,19 +8,13 @@
     <table>
         {{ form.as_table }}
     </table>
-    <input
-        value="Save"
-        type="submit">
-    <input
-        value="Cancel"
-        type="button"
-        onclick="location.href='{% url "list" todo_list.id %}'">
+    <p>
+    <button class="btn btn-success" name="submit">Save</button>
+    <a class="btn btn-info" href="{% url 'list' todo_list.id %}">Cancel</a>
+    </p>
     {% if object %}
-        <input
-            value="Delete this item"
-            type="button"
-            onclick="location.href='{% url "item-delete" todo_list.id object.id %}'">
+      <a class="btn btn-danger" href="{% url 'item-delete' todo_list.id object.id %}">Delete this item?</a>
     {% endif %}
 </form>
 
-{% endblock %}
+{% endblock content %}
