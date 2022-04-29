@@ -9,7 +9,7 @@
     {% for todolist in object_list %}
     <li>
         <p>
-        <a class="btn btn-info" href='{% url "list" todolist.id %}'>{{ todolist.title }}</a>
+        <a class="btn btn-outline-dark" href='{% url "list" todolist.id %}'>{{ todolist.title }}</a>
         </p>
     </li>
     {% empty %}
