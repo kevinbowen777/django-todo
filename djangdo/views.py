@@ -1,12 +1,12 @@
 from django.urls import reverse, reverse_lazy
-from django.views.generic import CreateView, DeleteView, ListView, UpdateView
+from django.views.generic import CreateView, DeleteView, ListView, TemplateView, UpdateView
 
 from .models import ToDoItem, ToDoList
 
 
 class ListListView(ListView):
     model = ToDoList
-    template_name = "djangdo/index.html"
+    template_name = "home.html"
 
 
 class ItemListView(ListView):
@@ -79,7 +79,7 @@ class ItemUpdate(UpdateView):
 
 class ListDelete(DeleteView):
     model = ToDoList
-    success_url = reverse_lazy("index")
+    success_url = reverse_lazy("home")
 
 
 class ItemDelete(DeleteView):
@@ -92,3 +92,7 @@ class ItemDelete(DeleteView):
         context = super().get_context_data(**kwargs)
         context["todo_list"] = self.object.todo_list
         return context
+
+
+class AboutPageView(TemplateView):
+    template_name = "about.html"

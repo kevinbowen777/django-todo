@@ -1,31 +1,70 @@
 {% load bootstrap4 %}
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name = "viewport" content="width=device-width, initial-scale=1">
-  <title>Djangdo To-do Lists</title>
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"/>
-  {% bootstrap_css %}
-  {% bootstrap_javascript jquery='full' %}
-</head>
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 border">
-    <a class="navbar-brand" href="{% url 'index' %}">Djangdo</a>
-  </nav>
-  <div>
-  <main role="main" class="container">
-    <div class="pb-2 mb-2 border-bottom">
-      {% block page_header %}{% endblock page_header %}
-    </div>
-    <div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Djangdo To-do Lists{% endblock title %}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}"/>
+    <!-- CSS -->
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'home' %}">Djangdo</a>
+      {% if user.is_authenticated %}
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="btn btn-outline-light" href="{% url 'list-add' %}">Tasks</a>
+          </li>
+        </ul>
+      {% endif %}
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {% if user.is_authenticated %}
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="btn btn-outline-light dropdown-toggle" href="#"
+              id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+                {{ user.username }}
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg-right"
+              aria-labelledby="navbarDropdown">
+                <a class="dropdown-item"
+                href="{% url 'password_reset' %}">Change password</a>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'logout' %}"> Log Out</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'about' %}">About</a>
+              </div>
+            </li>
+          </ul>
+        {% else %}
+          <form class="form-inline ml-auto">
+            <a href="{% url 'login' %}" class="btn btn-outline-secondary">
+            Log In</a>
+            <a href="{% url 'about' %}" class="btn btn-outline-secondary ml-2">
+            About</a>
+          </form>
+        {% endif %}
+      </div>
+      </nav>
+    </header>
+    <div class="container">
       {% block content %}
       {% endblock content %}
     </div>
-  </main>
-  </div>
-</body>
-
+  </body>
 </html>
