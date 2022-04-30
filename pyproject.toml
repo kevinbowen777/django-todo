@@ -9,6 +9,9 @@ exclude = '''
   | .venv
   | alembic
   | staticfiles
+  | djangdo/migrations/0001_initial.py
+  | djangdo/migrations/0002_alter_todolist_owner.py
+  | djangdo/migrations/0003_alter_todolist_id.py
   | build
   | dist
   | ^.*\b(migrations)\b.*$

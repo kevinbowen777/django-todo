@@ -1,14 +1,20 @@
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse, reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, DeleteView, ListView, TemplateView, UpdateView
 
 from .models import ToDoItem, ToDoList
 
+decorators = [login_required]
 
+
+@method_decorator(decorators, name="dispatch")
 class ListListView(ListView):
     model = ToDoList
     template_name = "home.html"
 
 
+@method_decorator(decorators, name="dispatch")
 class ItemListView(ListView):
     model = ToDoItem
     template_name = "djangdo/todo_list.html"
@@ -22,6 +28,7 @@ class ItemListView(ListView):
         return context
 
 
+@method_decorator(decorators, name="dispatch")
 class ListCreate(CreateView):
     model = ToDoList
     fields = ["title"]
@@ -32,6 +39,7 @@ class ListCreate(CreateView):
         return context
 
 
+@method_decorator(decorators, name="dispatch")
 class ItemCreate(CreateView):
     model = ToDoItem
     fields = [
@@ -58,6 +66,7 @@ class ItemCreate(CreateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
+@method_decorator(decorators, name="dispatch")
 class ItemUpdate(UpdateView):
     model = ToDoItem
     fields = [
@@ -77,11 +86,13 @@ class ItemUpdate(UpdateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
+@method_decorator(decorators, name="dispatch")
 class ListDelete(DeleteView):
     model = ToDoList
     success_url = reverse_lazy("home")
 
 
+@method_decorator(decorators, name="dispatch")
 class ItemDelete(DeleteView):
     model = ToDoItem
 

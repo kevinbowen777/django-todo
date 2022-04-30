@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
@@ -9,6 +10,11 @@ def one_week_hence():
 
 class ToDoList(models.Model):
     title = models.CharField(max_length=100, unique=True)
+    owner = models.ForeignKey(
+        get_user_model(),
+        on_delete=models.CASCADE,
+        null=True,
+    )
 
     def get_absolute_url(self):
         return reverse("list", args=[self.id])
