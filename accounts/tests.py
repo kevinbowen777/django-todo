@@ -63,3 +63,15 @@ class LoginPageTests(TestCase):
         self.assertTemplateUsed(self.response, "registration/login.html")
         self.assertContains(self.response, "Log In")
         self.assertNotContains(self.response, "This does not belong here.")
+
+
+class LogoutPageTests(TestCase):
+    def setUp(self):
+        url = reverse("logout")
+        self.response = self.client.get(url)
+
+    def test_logout_template(self):
+        self.assertEqual(self.response.status_code, 302)
+        # self.assertTemplateUsed(self.response, "home.html")
+        # self.assertContains(self.response, "Track your tasks.")
+        # self.assertNotContains(self.response, "This does not belong here.")
