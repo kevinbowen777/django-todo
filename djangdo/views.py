@@ -9,6 +9,9 @@ class ListListView(LoginRequiredMixin, ListView):
     model = ToDoList
     template_name = "index.html"
 
+    def get_queryset(self):
+        return ToDoList.objects.filter(owner=self.request.user)
+
 
 class ItemListView(LoginRequiredMixin, ListView):
     model = ToDoItem
