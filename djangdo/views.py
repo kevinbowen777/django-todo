@@ -1,21 +1,16 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse, reverse_lazy
-from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, DeleteView, ListView, TemplateView, UpdateView
 
 from .models import ToDoItem, ToDoList
 
-decorators = [login_required]
 
-
-@method_decorator(decorators, name="dispatch")
-class ListListView(ListView):
+class ListListView(LoginRequiredMixin, ListView):
     model = ToDoList
     template_name = "index.html"
 
 
-@method_decorator(decorators, name="dispatch")
-class ItemListView(ListView):
+class ItemListView(LoginRequiredMixin, ListView):
     model = ToDoItem
     template_name = "djangdo/todo_list.html"
 
@@ -28,8 +23,7 @@ class ItemListView(ListView):
         return context
 
 
-@method_decorator(decorators, name="dispatch")
-class ListCreate(CreateView):
+class ListCreate(LoginRequiredMixin, CreateView):
     model = ToDoList
     fields = ["title"]
 
@@ -39,8 +33,7 @@ class ListCreate(CreateView):
         return context
 
 
-@method_decorator(decorators, name="dispatch")
-class ItemCreate(CreateView):
+class ItemCreate(LoginRequiredMixin, CreateView):
     model = ToDoItem
     fields = [
         "todo_list",
@@ -66,7 +59,6 @@ class ItemCreate(CreateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-@method_decorator(decorators, name="dispatch")
 class ItemUpdate(UpdateView):
     model = ToDoItem
     fields = [
@@ -86,14 +78,12 @@ class ItemUpdate(UpdateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-@method_decorator(decorators, name="dispatch")
-class ListDelete(DeleteView):
+class ListDelete(LoginRequiredMixin, DeleteView):
     model = ToDoList
     success_url = reverse_lazy("home")
 
 
-@method_decorator(decorators, name="dispatch")
-class ItemDelete(DeleteView):
+class ItemDelete(LoginRequiredMixin, DeleteView):
     model = ToDoItem
 
     def get_success_url(self):
