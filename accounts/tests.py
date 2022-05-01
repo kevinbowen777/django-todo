@@ -71,7 +71,22 @@ class LogoutPageTests(TestCase):
         self.response = self.client.get(url)
 
     def test_logout_template(self):
+        """Redirects to home. all-auth with ask to confirm
+        and present an actual logout page to test.
+        """
         self.assertEqual(self.response.status_code, 302)
         # self.assertTemplateUsed(self.response, "home.html")
         # self.assertContains(self.response, "Track your tasks.")
         # self.assertNotContains(self.response, "This does not belong here.")
+
+
+class PasswordResetFormTests(TestCase):
+    def setUp(self):
+        url = reverse("password_reset")
+        self.response = self.client.get(url)
+
+    def test_login_template(self):
+        self.assertEqual(self.response.status_code, 200)
+        self.assertTemplateUsed(self.response, "registration/password_reset_form.html")
+        self.assertContains(self.response, "Password Reset")
+        self.assertNotContains(self.response, "This does not belong here.")
