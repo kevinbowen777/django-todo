@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 
 {% load i18n %}
 
@@ -10,7 +9,7 @@
 {% if user.emailaddress_set.all %}
 <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
 
-<form action="{% url 'account_email' %}" class="col-md-8 email_list" method="post">
+<form action="{% url 'email' %}" class="col-md-8 email_list" method="post">
 {% csrf_token %}
 <fieldset class="blockLabels">
 
@@ -50,7 +49,7 @@
 
     <form method="post" action="{% url 'account_email' %}" class="col-md-6 add_email">
         {% csrf_token %}
-        {{ form|crispy }}
+        {{ form.as_p }}
         <button name="action_add" class="btn btn-info" type="submit">{% trans "Add E-mail" %}</button>
     </form>
   {% endif %}
