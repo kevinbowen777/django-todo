@@ -68,7 +68,7 @@ class ItemCreate(LoginRequiredMixin, CreateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ItemUpdate(UpdateView):
+class ItemUpdate(LoginRequiredMixin, UpdateView):
     model = ToDoItem
     fields = [
         "todo_list",
