@@ -11,7 +11,7 @@ decorators = [login_required]
 @method_decorator(decorators, name="dispatch")
 class ListListView(ListView):
     model = ToDoList
-    template_name = "home.html"
+    template_name = "index.html"
 
 
 @method_decorator(decorators, name="dispatch")
@@ -103,6 +103,10 @@ class ItemDelete(DeleteView):
         context = super().get_context_data(**kwargs)
         context["todo_list"] = self.object.todo_list
         return context
+
+
+class HomePageView(TemplateView):
+    template_name = "home.html"
 
 
 class AboutPageView(TemplateView):
