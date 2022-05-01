@@ -1,23 +1,14 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block page_header %}
+  <div class="jumbotron">
+    <h1 class="display-4">Track your tasks.</h1>
 
-{% if object_list %}
-  <h3>All my lists</h3>
-  {% endif %}
-  <ul>
-    {% for todolist in object_list %}
-    <li>
-        <p>
-        <a class="btn btn-outline-dark" href='{% url "list" todolist.id %}'>{{ todolist.title }}</a>
-        </p>
-    </li>
-    {% empty %}
-    <h4>You have no lists!</h4>
-    {% endfor %}
-  </ul>
-  <p>
-    <a class="btn btn-success" href="{% url "list-add" %}">Add a new list</a>
-  </p>
+    <p class="lead">Make your own To-do lists, and keep a list of the
+        topics you're working on. Whenever you work on something new
+        , make an entry summarizing what you've need to do.</p>
 
-  {% endblock content %}
+    <a class="btn btn-lg btn-primary" href="{% url 'signup' %}"
+        role="button">Register &raquo;</a>
+  </div>
+{% endblock page_header %}
