@@ -1,4 +1,4 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, DeleteView, ListView, TemplateView, UpdateView
 
@@ -88,10 +88,14 @@ class ItemUpdate(LoginRequiredMixin, UpdateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ListDelete(LoginRequiredMixin, DeleteView):
+class ListDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = ToDoList
     template_name = "lists/todolist_confirm_delete.html"
     success_url = reverse_lazy("home")
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.owner == self.request.user
 
 
 class ItemDelete(LoginRequiredMixin, DeleteView):
