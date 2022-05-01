@@ -5,7 +5,7 @@
 <p>Are you sure you want to delete the list <i><strong>{{ object.title }}</strong></i>?</p>
   <form method="POST">
     {% csrf_token %}
-    <button name="submit" class="btn btn-danger">Yes, delete.</button>
-    <a class="btn btn-success" href="{% url 'home' %}">Cancel</a>
+    <button class="btn btn-danger" type="submit">Yes, delete.</button>
+    <a class="btn btn-success" href="{% url 'index' %}">Cancel</a>
   </form>
 {% endblock content %}
