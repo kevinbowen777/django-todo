@@ -28,10 +28,17 @@ class ListCreate(LoginRequiredMixin, CreateView):
     fields = ["title"]
     template_name = "lists/todolist_new.html"
 
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
+
+
+"""
     def get_context_data(self):
         context = super(ListCreate, self).get_context_data()
         context["title"] = "Add a new list"
         return context
+"""
 
 
 class ItemCreate(LoginRequiredMixin, CreateView):
