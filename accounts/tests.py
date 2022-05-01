@@ -85,8 +85,20 @@ class PasswordResetFormTests(TestCase):
         url = reverse("password_reset")
         self.response = self.client.get(url)
 
-    def test_login_template(self):
+    def test_password_reset_form_template(self):
         self.assertEqual(self.response.status_code, 200)
         self.assertTemplateUsed(self.response, "registration/password_reset_form.html")
         self.assertContains(self.response, "Password Reset")
+        self.assertNotContains(self.response, "This does not belong here.")
+
+
+class PasswordResetDoneTests(TestCase):
+    def setUp(self):
+        url = reverse("password_reset_done")
+        self.response = self.client.get(url)
+
+    def test_password_reset_done_template(self):
+        self.assertEqual(self.response.status_code, 200)
+        self.assertTemplateUsed(self.response, "registration/password_reset_done.html")
+        self.assertContains(self.response, "Password reset complete")
         self.assertNotContains(self.response, "This does not belong here.")
