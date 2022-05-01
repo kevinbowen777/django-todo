@@ -53,6 +53,8 @@ class SignupTests(TestCase):
         self.assertEqual(get_user_model().objects.all()[0].email, self.email)
 
 
+# The following six tests check that default auth templates are being
+# overwritten by local, custom templates.
 class LoginPageTests(TestCase):
     def setUp(self):
         url = reverse("login")
@@ -110,6 +112,10 @@ class PasswordChangeFormTests(TestCase):
         self.response = self.client.get(url)
 
     def test_password_change_form_template(self):
+        """Unsure why a 302 response is being generated for the
+        remaining tests. This makes it difficult to test for templates
+        being used. Need research to fix tests.
+        """
         self.assertEqual(self.response.status_code, 302)
         # self.assertTemplateUsed(self.response, "registration/password_change_form.html")
         # self.assertContains(self.response, "Change Password")
@@ -122,7 +128,7 @@ class PasswordChangeDoneTests(TestCase):
         self.response = self.client.get(url)
 
     def test_password_change_done_template(self):
-        self.assertEqual(self.response.status_code, 302)
+        self.assertEqual(self.response.status_code, 200)
         # self.assertTemplateUsed(self.response, "registration/password_change_done.html")
         # self.assertContains(self.response, "Password Change Successful")
         # self.assertNotContains(self.response, "This does not belong here.")
