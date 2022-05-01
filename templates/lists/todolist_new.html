@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block title %}Create New List{% endblock title %}
 
-<h3>{{ title }}</h3>
+{% block content %}
+<h3>Create a new list</h3>
 <div>
   <div>
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
       <button name="submit" class="btn btn-success">Save</button>
-      <a class="btn btn-info" href="{% url 'home' %}">Cancel</a>
+      <a class="btn btn-info" href="{% url 'index' %}">Cancel</a>
     </form>
   </div>
 </div>
-
-{% endblock %}
+{% endblock content %}

@@ -12,7 +12,7 @@ class ListListView(LoginRequiredMixin, ListView):
 
 class ItemListView(LoginRequiredMixin, ListView):
     model = ToDoItem
-    template_name = "djangdo/todo_list.html"
+    template_name = "lists/todo_list.html"
 
     def get_queryset(self):
         return ToDoItem.objects.filter(todo_list_id=self.kwargs["list_id"])
@@ -26,6 +26,7 @@ class ItemListView(LoginRequiredMixin, ListView):
 class ListCreate(LoginRequiredMixin, CreateView):
     model = ToDoList
     fields = ["title"]
+    template_name = "lists/todolist_new.html"
 
     def get_context_data(self):
         context = super(ListCreate, self).get_context_data()
@@ -41,6 +42,7 @@ class ItemCreate(LoginRequiredMixin, CreateView):
         "description",
         "due_date",
     ]
+    template_name = "lists/todoitem_new.html"
 
     def get_initial(self):
         initial_data = super(ItemCreate, self).get_initial()
@@ -67,6 +69,7 @@ class ItemUpdate(UpdateView):
         "description",
         "due_date",
     ]
+    template_name = "lists/todoitem_new.html"
 
     def get_context_data(self):
         context = super(ItemUpdate, self).get_context_data()
@@ -80,11 +83,13 @@ class ItemUpdate(UpdateView):
 
 class ListDelete(LoginRequiredMixin, DeleteView):
     model = ToDoList
+    template_name = "lists/todolist_confirm_delete.html"
     success_url = reverse_lazy("home")
 
 
 class ItemDelete(LoginRequiredMixin, DeleteView):
     model = ToDoItem
+    template_name = "lists/todoitem_confirm_delete.html"
 
     def get_success_url(self):
         return reverse_lazy("list", args=[self.kwargs["list_id"]])
