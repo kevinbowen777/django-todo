@@ -13,9 +13,8 @@ class ToDoList(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(
         get_user_model(),
+        default=1,
         on_delete=models.CASCADE,
-        null=True,
-        blank=True,
     )
 
     def get_absolute_url(self):
@@ -33,12 +32,6 @@ class ToDoItem(models.Model):
     todo_list = models.ForeignKey(
         ToDoList,
         on_delete=models.CASCADE,
-    )
-    owner = models.ForeignKey(
-        get_user_model(),
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
     )
 
     def get_absolute_url(self):
