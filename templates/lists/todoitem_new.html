@@ -1,19 +1,18 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block title %}Add new item{% endblock title %}
 
 {% block content %}
 
 <h3>Add a new item to list:</h3>
-<form class="col-md-4" method="post">
+<form class="col-md-6" method="post">
     {% csrf_token %}
     <table>
-        {{ form.as_table }}
+        {{ form|crispy }}
     </table>
-    <p>
     <button class="btn btn-success" name="submit">Save</button>
     <a class="btn btn-info" href="{% url 'list' todo_list.id %}">Cancel</a>
-    </p>
     {% if object %}
       <a class="btn btn-danger mr-1" href="{% url 'item-delete' todo_list.id object.id %}">Delete this item?</a>
     {% endif %}
