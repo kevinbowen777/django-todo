@@ -1,5 +1,6 @@
 asgiref @ file:///home/kbowen/.cache/pypoetry/artifacts/71/66/fe/0268717622fd9cf036d2fb46b7ad84ad39e3776bc461ce21a4284f32d2/asgiref-3.5.0-py3-none-any.whl
 astroid @ file:///home/kbowen/.cache/pypoetry/artifacts/33/24/90/3a74ecf6ddf3c2b124b098eefb14b98923ef620c97a2dd8ee403d942e9/astroid-2.11.3-py3-none-any.whl
+beautifulsoup4 @ file:///home/kbowen/.cache/pypoetry/artifacts/e0/aa/39/7b168d115afeea9a7de54a24de624233f50f1b5a3f67d2e650da99a476/beautifulsoup4-4.11.1-py3-none-any.whl
 black @ file:///home/kbowen/.cache/pypoetry/artifacts/e8/de/2c/19944b95ee77b4d14c8cdea53bd5c02ef045630fa091357baa5f8b6af8/black-22.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 cfgv @ file:///home/kbowen/.cache/pypoetry/artifacts/35/10/a3/f57b5e70e8b5d5f31bccdd15df3781efda09dc1b44b473591e360c20e5/cfgv-3.3.1-py2.py3-none-any.whl
 click @ file:///home/kbowen/.cache/pypoetry/artifacts/91/49/3a/c7bac12b8fd30b018827acf9fe1779fbf8ac4b25bdaab4fc03663b2852/click-8.1.2-py3-none-any.whl
@@ -8,6 +9,7 @@ distlib @ file:///home/kbowen/.cache/pypoetry/artifacts/c6/c9/9e/cc7bc0747799b29
 dj-database-url @ file:///home/kbowen/.cache/pypoetry/artifacts/4d/45/5f/ecd99aa66306968dc0a97beb09e86273947cb94400fddfa1d308d10331/dj_database_url-0.5.0-py2.py3-none-any.whl
 dj-email-url @ file:///home/kbowen/.cache/pypoetry/artifacts/fb/80/72/5f336118db261fef4a879bf50d3cb4ff747dd1d2a610b14b60a532b307/dj_email_url-1.0.5-py2.py3-none-any.whl
 Django @ file:///home/kbowen/.cache/pypoetry/artifacts/bc/eb/c7/9de0e5ba3f75f2216e177fb6788e183cf501da3c89b082ff913a5b3176/Django-4.0.4-py3-none-any.whl
+django-bootstrap4 @ file:///home/kbowen/.cache/pypoetry/artifacts/39/8f/40/8620c117d4d8b3f0594c043888cfb2389aac574847770aab971f6b03e5/django_bootstrap4-22.1-py3-none-any.whl
 django-cache-url @ file:///home/kbowen/.cache/pypoetry/artifacts/44/fe/76/672cde12e39eff568c07ca2c62db97f751c6ead8c52b1f3b181828b6b5/django_cache_url-3.4.0-py2.py3-none-any.whl
 django-debug-toolbar @ file:///home/kbowen/.cache/pypoetry/artifacts/3b/19/d7/11fce2034d01440f128555d91699b5e1b7ae94cc42de73ed0ac873caf2/django_debug_toolbar-3.2.4-py3-none-any.whl
 environs @ file:///home/kbowen/.cache/pypoetry/artifacts/03/3a/2c/b1c48821c153bd40186099cd1e72d6a8b15023ae6caa88f771d6055c32/environs-9.5.0-py2.py3-none-any.whl
@@ -31,6 +33,7 @@ pyparsing @ file:///home/kbowen/.cache/pypoetry/artifacts/21/a6/3b/55ae9f701123d
 python-dotenv @ file:///home/kbowen/.cache/pypoetry/artifacts/03/b3/0a/614098987b7913fdcbdc5e81af3d9b7deecbb2d3802ad78521603deb1e/python_dotenv-0.20.0-py3-none-any.whl
 PyYAML @ file:///home/kbowen/.cache/pypoetry/artifacts/72/40/79/b7f82de66d678bc8de004df69ca112b99a38e71beff3aef6c4e2349303/PyYAML-6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl
 six @ file:///home/kbowen/.cache/pypoetry/artifacts/89/b2/f8/fd92b6d5daa0f8889429b2fc67ec21eedc5cae5d531ee2853828ced6c7/six-1.16.0-py2.py3-none-any.whl
+soupsieve @ file:///home/kbowen/.cache/pypoetry/artifacts/9b/5a/a8/0949b7240493f355f5d574cbe0389102ac50a52583ec465be6d377cac7/soupsieve-2.3.2.post1-py3-none-any.whl
 sqlparse @ file:///home/kbowen/.cache/pypoetry/artifacts/10/f5/22/c9c991a71e27c4d8f69907d92cce74a369cbb3183dc4a6d27e2ae4ab0b/sqlparse-0.4.2-py3-none-any.whl
 toml @ file:///home/kbowen/.cache/pypoetry/artifacts/51/ac/24/674da558495229c57c3d2333cb23e24aac7aadf723ced29e2cc41a9e6e/toml-0.10.2-py2.py3-none-any.whl
 tomli @ file:///home/kbowen/.cache/pypoetry/artifacts/62/12/b6/6db9ebb9c8e1a6c5aa8a92ae73098d8119816b5e8507490916621bc305/tomli-2.0.1-py3-none-any.whl
