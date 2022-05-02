@@ -38,6 +38,7 @@ python = "^3.10"
 Django = "^4.0.3"
 environs = {extras = ["django"], version = "^9.5.0"}
 django-bootstrap4 = "^22.1"
+django-crispy-forms = "^1.14.0"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.12.2"
