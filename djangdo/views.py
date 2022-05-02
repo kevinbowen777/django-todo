@@ -101,9 +101,13 @@ class ListDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return obj.owner == self.request.user
 
 
-class ItemDelete(LoginRequiredMixin, DeleteView):
+class ItemDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = ToDoItem
     template_name = "lists/todoitem_confirm_delete.html"
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.todo_list.owner == self.request.user
 
     def get_success_url(self):
         return reverse_lazy("list", args=[self.kwargs["list_id"]])
