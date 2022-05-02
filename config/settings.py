@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third-party applications
     "bootstrap4",
+    "crispy_forms",
     "debug_toolbar",
     # Local applications
     "djangdo",
@@ -121,18 +122,23 @@ STATICFILES_FINDERS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+# django-crispy-forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
 LOGIN_REDIRECT_URL = "index"
 LOGOUT_REDIRECT_URL = "home"
 
-AUTH_USER_MODEL = "accounts.CustomUser"
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # django-debug-toolbar
 import socket
 
-# Use the following in Docker only:
+# Uncomment the following two lines for using toolbar in Docker:
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
-# The following is for use locally:
+# The following line is for toolbar use locally:
 # INTERNAL_IPS = ["127.0.0.1"]
