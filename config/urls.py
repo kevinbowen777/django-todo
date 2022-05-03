@@ -3,10 +3,12 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # Django admin
     path("admin/", admin.site.urls),
+    # User management
+    path("accounts/", include("allauth.urls")),
+    # Local applications
     path("", include("djangdo.urls")),
-    path("accounts/", include("accounts.urls")),
-    path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 if settings.DEBUG:
