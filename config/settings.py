@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     "bootstrap4",
     "crispy_forms",
     "debug_toolbar",
+    "allauth",
+    "allauth.account",
     # Local applications
     "djangdo",
     "accounts",
@@ -124,6 +126,9 @@ STATICFILES_FINDERS = [
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+# django-allauth config
+SITE_ID = 1
 
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
