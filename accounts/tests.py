@@ -37,12 +37,12 @@ class SignupTests(TestCase):
     email = "newuser@example.com"
 
     def setUp(self):
-        url = reverse("signup")
+        url = reverse("account_signup")
         self.response = self.client.get(url)
 
     def test_signup_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(self.response, "registration/signup.html")
+        self.assertTemplateUsed(self.response, "account/signup.html")
         self.assertContains(self.response, "Sign Up")
         self.assertNotContains(self.response, "This does not belong here.")
 
@@ -57,19 +57,19 @@ class SignupTests(TestCase):
 # overwritten by local, custom templates.
 class LoginPageTests(TestCase):
     def setUp(self):
-        url = reverse("login")
+        url = reverse("account_login")
         self.response = self.client.get(url)
 
     def test_login_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(self.response, "registration/login.html")
+        self.assertTemplateUsed(self.response, "account/login.html")
         self.assertContains(self.response, "Log In")
         self.assertNotContains(self.response, "This does not belong here.")
 
 
 class LogoutPageTests(TestCase):
     def setUp(self):
-        url = reverse("logout")
+        url = reverse("account_logout")
         self.response = self.client.get(url)
 
     def test_logout_template(self):
@@ -84,31 +84,31 @@ class LogoutPageTests(TestCase):
 
 class PasswordResetFormTests(TestCase):
     def setUp(self):
-        url = reverse("password_reset")
+        url = reverse("account_reset_password")
         self.response = self.client.get(url)
 
     def test_password_reset_form_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(self.response, "registration/password_reset_form.html")
+        self.assertTemplateUsed(self.response, "account/password_reset.html")
         self.assertContains(self.response, "Password Reset")
         self.assertNotContains(self.response, "This does not belong here.")
 
 
 class PasswordResetDoneTests(TestCase):
     def setUp(self):
-        url = reverse("password_reset_done")
+        url = reverse("account_reset_password_done")
         self.response = self.client.get(url)
 
     def test_password_reset_done_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(self.response, "registration/password_reset_done.html")
+        self.assertTemplateUsed(self.response, "account/password_reset_done.html")
         self.assertContains(self.response, "Password reset complete")
         self.assertNotContains(self.response, "This does not belong here.")
 
 
 class PasswordChangeFormTests(TestCase):
     def setUp(self):
-        url = reverse("password_change")
+        url = reverse("account_set_password")
         self.response = self.client.get(url)
 
     def test_password_change_form_template(self):
@@ -117,18 +117,18 @@ class PasswordChangeFormTests(TestCase):
         being used. Need research to fix tests.
         """
         self.assertEqual(self.response.status_code, 302)
-        # self.assertTemplateUsed(self.response, "registration/password_change_form.html")
+        # self.assertTemplateUsed(self.response, "account/password_change.html")
         # self.assertContains(self.response, "Change Password")
         # self.assertNotContains(self.response, "This does not belong here.")
 
 
 class PasswordChangeDoneTests(TestCase):
     def setUp(self):
-        url = reverse("password_change_done")
+        url = reverse("account_reset_password_done")
         self.response = self.client.get(url)
 
     def test_password_change_done_template(self):
-        self.assertEqual(self.response.status_code, 302)
-        # self.assertTemplateUsed(self.response, "registration/password_change_done.html")
-        # self.assertContains(self.response, "Password Change Successful")
-        # self.assertNotContains(self.response, "This does not belong here.")
+        self.assertEqual(self.response.status_code, 200)
+        self.assertTemplateUsed(self.response, "account/password_reset_done.html")
+        self.assertContains(self.response, "Password Reset Complete")
+        self.assertNotContains(self.response, "This does not belong here.")
