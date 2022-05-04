@@ -9,7 +9,7 @@
 {% if user.emailaddress_set.all %}
 <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
 
-<form action="{% url 'email' %}" class="col-md-8 email_list" method="post">
+<form action="{% url 'account_email' %}" class="col-md-8 email_list" method="post">
 {% csrf_token %}
 <fieldset class="blockLabels">
 
