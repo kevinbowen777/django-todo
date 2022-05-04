@@ -24,12 +24,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     # Third-party applications
     "bootstrap4",
     "crispy_forms",
     "debug_toolbar",
     "allauth",
     "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
     # Local applications
     "djangdo",
     "accounts",
