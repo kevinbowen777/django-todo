@@ -2,6 +2,7 @@
 # from: https://github.com/github/gitignore
 #
 LOCAL_APP_NOTES
+LOCAL_APP_NOTES~
 app.db
 .idea/
 logs/
