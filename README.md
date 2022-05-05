@@ -2,9 +2,9 @@
 
 ---
 ## Features
- - Create, update and edit lists
- - Add, edit and delete list items
- - Set due dates
+ - Allow multiple users to logon, create, update and edit their own lists
+ - Email account verifcation and support for GitHub Oauth login
+ - Support for django-debug-toolbar in develpment
 
 ### Installation
  - `git clone https://github.com/kevinbowen777/djangdo.git`
