@@ -9,9 +9,7 @@
 ### Installation
  - `git clone https://github.com/kevinbowen777/djangdo.git`
  - `cd djangdo`
- - `mkvirtualenv djangdo` or  `workon djangdo`
- - `poetry install`
- - `poetry run python manage.py runserver`
+ - `docker-compose up` or `docker-compose up --build`
  - Open browser to http://127.0.0.1:8000
 
 ---
