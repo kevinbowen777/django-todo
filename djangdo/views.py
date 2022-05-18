@@ -12,6 +12,8 @@ class ListListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return ToDoList.objects.filter(owner=self.request.user)
 
+    paginate_by = 5
+
 
 class ItemListView(LoginRequiredMixin, ListView):
     model = ToDoItem
@@ -24,6 +26,8 @@ class ItemListView(LoginRequiredMixin, ListView):
         context = super().get_context_data()
         context["todo_list"] = ToDoList.objects.get(id=self.kwargs["list_id"])
         return context
+
+    paginate_by = 5
 
 
 class ListCreate(LoginRequiredMixin, CreateView):
