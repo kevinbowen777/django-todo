@@ -4,13 +4,16 @@
 ## Features
  - Allow multiple users to logon, create, update and edit their own lists
  - Email account verifcation and support for GitHub Oauth login
- - Support for django-debug-toolbar in develpment
+ - Support for `django-debug-toolbar` in develpment
 
 ### Installation
  - `git clone https://github.com/kevinbowen777/djangdo.git`
  - `cd djangdo`
  - `docker-compose up` or `docker-compose up --build`
  - Open browser to http://127.0.0.1:8000
+
+### Testing
+ - `docker-compose exec web python manage.py test`
 
 ---
 ## Screenshots
