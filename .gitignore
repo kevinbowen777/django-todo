@@ -3,6 +3,7 @@
 #
 LOCAL_APP_NOTES
 LOCAL_APP_NOTES~
+djangdo.sqlite3
 app.db
 .idea/
 logs/
