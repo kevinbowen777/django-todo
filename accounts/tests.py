@@ -47,9 +47,13 @@ class SignupTests(TestCase):
         self.assertNotContains(self.response, "This does not belong here.")
 
     def test_signup_form(self):
-        new_user = get_user_model().objects.create_user(self.username, self.email)  # noqa: F841
+        new_user = get_user_model().objects.create_user(  # noqa:F841
+            self.username, self.email
+        )  # noqa: F841
         self.assertEqual(get_user_model().objects.all().count(), 1)
-        self.assertEqual(get_user_model().objects.all()[0].username, self.username)
+        self.assertEqual(
+            get_user_model().objects.all()[0].username, self.username
+        )
         self.assertEqual(get_user_model().objects.all()[0].email, self.email)
 
 
@@ -101,7 +105,9 @@ class PasswordResetDoneTests(TestCase):
 
     def test_password_reset_done_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(self.response, "account/password_reset_done.html")
+        self.assertTemplateUsed(
+            self.response, "account/password_reset_done.html"
+        )
         self.assertContains(self.response, "Password reset complete")
         self.assertNotContains(self.response, "This does not belong here.")
 
@@ -117,7 +123,7 @@ class PasswordChangeFormTests(TestCase):
         being used. Need research to fix tests.
         """
         self.assertEqual(self.response.status_code, 302)
-        # self.assertTemplateUsed(self.response, "account/password_change.html")
+        # self.assertTemplateUsed(self.response, "account/password_change.html")  # noqa:E501
         # self.assertContains(self.response, "Change Password")
         # self.assertNotContains(self.response, "This does not belong here.")
 
@@ -129,6 +135,8 @@ class PasswordChangeDoneTests(TestCase):
 
     def test_password_change_done_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(self.response, "account/password_reset_done.html")
+        self.assertTemplateUsed(
+            self.response, "account/password_reset_done.html"
+        )
         self.assertContains(self.response, "Password Reset Complete")
         self.assertNotContains(self.response, "This does not belong here.")
