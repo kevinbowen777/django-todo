@@ -1,5 +1,4 @@
 [run]
-term_missing = true
 omit =
     */__init__.py,
     *manage.py,
