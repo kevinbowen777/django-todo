@@ -17,6 +17,9 @@ class ToDoList(models.Model):
         on_delete=models.CASCADE,
     )
 
+    class Meta:
+        ordering = ["date"]
+
     def get_absolute_url(self):
         return reverse("list", args=[self.id])
 
