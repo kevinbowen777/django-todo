@@ -19,13 +19,23 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="ToDoList",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
                 ("title", models.CharField(max_length=100, unique=True)),
                 ("date", models.DateTimeField(auto_now_add=True)),
                 (
                     "owner",
                     models.ForeignKey(
-                        default=1, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL
+                        default=1,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
                     ),
                 ),
             ],
@@ -33,12 +43,31 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="ToDoItem",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
                 ("title", models.CharField(max_length=100)),
                 ("description", models.TextField(blank=True, null=True)),
                 ("created_date", models.DateTimeField(auto_now_add=True)),
-                ("due_date", models.DateTimeField(default=djangdo.models.one_week_hence)),
-                ("todo_list", models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to="djangdo.todolist")),
+                (
+                    "due_date",
+                    models.DateTimeField(
+                        default=djangdo.models.one_week_hence
+                    ),
+                ),
+                (
+                    "todo_list",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="djangdo.todolist",
+                    ),
+                ),
             ],
             options={
                 "ordering": ["due_date"],
