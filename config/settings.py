@@ -2,6 +2,8 @@ from pathlib import Path
 
 from environs import Env
 
+# import socket  # noqa: E402 # Comment out if not using debug_toolbar
+
 env = Env()
 env.read_env()
 
@@ -28,7 +30,7 @@ INSTALLED_APPS = [
     # Third-party applications
     "bootstrap4",
     "crispy_forms",
-    "debug_toolbar",
+    # "debug_toolbar",
     "django_extensions",
     "allauth",
     "allauth.account",
@@ -47,7 +49,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -85,16 +87,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa:E501
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa:E501,B950
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa:E501
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa:E501,B950
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa:E501
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa:E501,B950
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa:E501
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa:E501,B950
     },
 ]
 
@@ -157,10 +159,9 @@ EMAIL_USE_TLS = True
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # django-debug-toolbar
-import socket
-
+# Note: disable when running Nox tests
 # Uncomment the following two lines for using toolbar in Docker:
-hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+# hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+# INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # The following line is for toolbar use locally:
 # INTERNAL_IPS = ["127.0.0.1"]

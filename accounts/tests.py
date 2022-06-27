@@ -123,7 +123,8 @@ class PasswordChangeFormTests(TestCase):
         being used. Need research to fix tests.
         """
         self.assertEqual(self.response.status_code, 302)
-        # self.assertTemplateUsed(self.response, "account/password_change.html")  # noqa:E501
+        # self.assertTemplateUsed(self.response,
+        # "account/password_change.html")  # noqa:E501,B950
         # self.assertContains(self.response, "Change Password")
         # self.assertNotContains(self.response, "This does not belong here.")
 
