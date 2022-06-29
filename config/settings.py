@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "bootstrap4",
     "crispy_forms",
     # "debug_toolbar",
+    "django_countries",
     "django_extensions",
     "allauth",
     "allauth.account",
@@ -158,7 +159,7 @@ EMAIL_USE_TLS = True
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-# media/file upload settings
+# media/file uploads URLs
 MEDIA_URL = "/media/"
 MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
 
