@@ -159,6 +159,10 @@ EMAIL_USE_TLS = True
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+# media/file uploads URLs
+MEDIA_URL = "/media/"
+MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
+
 # django-debug-toolbar
 # Note: disable when running Nox tests
 # Uncomment the following two lines for using toolbar in Docker:
