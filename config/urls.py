@@ -1,4 +1,6 @@
-from django.conf import settings  # noqa:F401
+"""URLs for the django-start template project."""
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
@@ -8,8 +10,9 @@ urlpatterns = [
     # User management
     path("accounts/", include("allauth.urls")),
     # Local applications
+    path("accounts/", include("accounts.urls")),
     path("", include("djangdo.urls")),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 """
 if settings.DEBUG:
