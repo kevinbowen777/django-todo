@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "bootstrap4",
     "crispy_forms",
     # "debug_toolbar",
+    "django_countries",
     "django_extensions",
     "allauth",
     "allauth.account",
