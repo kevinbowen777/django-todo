@@ -15,6 +15,9 @@
 ### Testing
  - `docker-compose exec web python manage.py test`
 
+### Live Demo on Heroku:
+ - [django-todo](https://kbowen-django-todo.herokuapp.com/)
+
 ---
 ## Screenshots
 
