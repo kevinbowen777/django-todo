@@ -1,8 +1,8 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 
 {% block title %}{{ todo_list.title }}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <div>
   <div>
     <div>
@@ -24,9 +24,9 @@
       {% endfor %}
     </ul>
     <p>
-      <a class="btn btn-success" href="{% url 'item-add' todo_list.id %}">Add a new item</a>
-      <a class="btn btn-danger" href="{% url 'list-delete' todo_list.id %}">Delete this list</a>
+      <a class="btn btn-success" href="{% url 'item-add' todo_list.id %}">Add a new task item</a>
+      <a class="btn btn-danger" href="{% url 'list-delete' todo_list.id %}">Delete this task list</a>
     </p>
   </div>
 </div>
-{% endblock content %}
+{% endblock inner %}

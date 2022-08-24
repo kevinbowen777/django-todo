@@ -1,13 +1,13 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 
-{% block title %}Delete List{% endblock title %}
+{% block title %}{% block head_title %}Delete Task - {{ object.title }}{% endblock head_title %}{% endblock title %}
 
-{% block content %}
+{% block inner %}
 <h3>Delete List</h3>
-<p>Are you sure you want to delete the list <i><strong>{{ object.title }}</strong></i>?</p>
+<p>Are you sure you want to delete this task list <i><strong>{{ object.title }}</strong></i>?</p>
   <form method="POST">
     {% csrf_token %}
     <button class="btn btn-danger" type="submit">Yes, delete.</button>
     <a class="btn btn-success" href="{% url 'index' %}">Cancel</a>
   </form>
-{% endblock content %}
+{% endblock inner %}

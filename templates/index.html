@@ -1,8 +1,12 @@
-{% extends "base.html" %}
+{% extends "lists/base.html" %}
 
-{% block content %}
+{% block title %}{{ todo_list.title }}{% endblock title %}
+
+{% block inner %}
+<div class="container">
+  <p>
 {% if object_list %}
-<h3>{{ user.username|title }}'s todo lists</h3>
+<h3>{{ user.username|title }}'s task lists</h3>
 {% endif %}
 <ul>
   {% for todolist in object_list %}
@@ -16,6 +20,8 @@
   {% endfor %}
 </ul>
 <p>
-  <a class="btn btn-success" href="{% url "list-add" %}">Add a new list</a>
+  <a class="btn btn-success" href="{% url "list-add" %}">Add a new task list</a>
 </p>
-{% endblock content %}
+  </p>
+</div>
+{% endblock inner %}
