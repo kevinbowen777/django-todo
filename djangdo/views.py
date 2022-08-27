@@ -4,7 +4,6 @@ from django.views.generic import (
     CreateView,
     DeleteView,
     ListView,
-    TemplateView,
     UpdateView,
 )
 
@@ -126,11 +125,3 @@ class ItemDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         context = super().get_context_data(**kwargs)
         context["todo_list"] = self.object.todo_list
         return context
-
-
-class HomePageView(TemplateView):
-    template_name = "home.html"
-
-
-class AboutPageView(TemplateView):
-    template_name = "about.html"

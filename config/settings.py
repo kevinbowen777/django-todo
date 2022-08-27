@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     # Local applications
-    "djangdo",
-    "accounts",
+    "djangdo.apps.DjangdoAppConfig",
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
 ]
 
 MIDDLEWARE = [
