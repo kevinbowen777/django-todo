@@ -1,4 +1,14 @@
-## Djangdo - A simple todo application made using the Django web framework
+## Djangdo 
+
+<div align="center">
+
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/djangdo.svg)](https://github.com/kevinbowen777/djangdo/issues)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+- A simple todo application made using the Django web framework
 
 ---
 ## Features
