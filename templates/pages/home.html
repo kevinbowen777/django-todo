@@ -1,10 +1,10 @@
-{% extends "base.html" %}
+{% extends "account/base.html" %}
 
 {% block title %}Welcome{% endblock title %}
 
-{% block content %}
+{% block inner %}
   <div class="jumbotron">
-    <h1 class="display-4">Track your tasks.</h1>
+    <h1 class="display-4">Track your tasks</h1>
     <p class="lead">Make your own To-do lists, and keep a list of the topics you're working on. Whenever you work on something new, make an entry summarizing what you need to do.</p>
     {% if user.is_authenticated %}
       <a class="btn btn-lg btn-primary" href="{% url 'index' %}"
@@ -13,4 +13,4 @@
       <a class="btn btn-lg btn-primary" href="{% url 'account_signup' %}" role="button">Register &raquo;</a>
     {% endif %}
   </div>
-{% endblock content %}
+{% endblock inner %}
