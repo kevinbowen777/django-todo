@@ -1,5 +1,5 @@
-Djangdo - A Django ToDo web application project
-======================================================
+Djangdo - A Django ToDo web application
+=======================================
 
 .. toctree::
    :hidden:
@@ -7,15 +7,36 @@ Djangdo - A Django ToDo web application project
 
    license
 
-The template repository for the
-`Web Framework Projects <https://github.com/kevinbowen777/web-project-index>`_
-assembled by Kevin Bowen.
-This repository runs a Django 4.1 todo application.
+A simple todo application made using the Django 4.1.1 web framework
 
 Features
 --------
 
- * Allow multiple users to logon, create, update and edit their own lists
+ * Application
+
+   * Allow multiple users to logon, create, update and edit their own task lists
+   * User registration with email verification & social(GitHub) login
+   * Bootstrap4 & crispy-forms decorations
+   * Customizable user profile pages with bio, profile pic, & country flags
+ * Dev/testing
+
+   * basic module testing templates
+   * Coverage reports
+   * Debug-toolbar available
+   * Examples of using Factories & pytest fixtures in account app testing
+   * `shell_plus` with IPython via `django-extensions` package
+   * Nox testing sessions for latest Python 3.9, 3.10, and 3.11
+
+     * black
+     * Sphinx documentaion generations
+     * linting
+       
+       * flake8
+       * flake8-bugbear
+       * flake8-docstrings
+       * flake8-import-order
+       * safety(python package vulnerability testing)
+
  * User registration with email verification & social(GitHub) login
  * Bootstrap4 & crispy-forms decorations
  * Customizable user profiles with bio, profile picture & country flags

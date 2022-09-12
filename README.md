@@ -12,9 +12,27 @@
 
 ---
 ## Features
- - Allow multiple users to logon, create, update and edit their own lists
- - Email account verifcation and support for GitHub Oauth login
- - Support for `django-debug-toolbar` in develpment
+ - Application
+     - Allow multiple users to logon, create, update and edit their own lists
+     - User registration with email verification & social(GitHub) login
+     - Bootstrap4 & crispy-forms decorations
+     - Customizable user profile pages with bio, profile pic, & country flags
+ - Dev/testing
+     - basic module testing templates
+     - Coverage reports
+     - Debug-toolbar available
+     - Examples of using Factories & pytest fixtures in account app testing
+     - `shell_plus` with IPython via `django-extensions` package
+     - Nox testing sessions for latest Python 3.9, 3.10, and 3.11
+         - black
+         - Sphinx documentaion generations
+         - linting
+             - flake8
+             - flake8-bugbear
+             - flake8-docstrings
+             - flake8-import-order
+         - safety(python package vulnerability testing)
+         - pytest sessions with coverage
 
 ### Installation
  - `git clone https://github.com/kevinbowen777/djangdo.git`
