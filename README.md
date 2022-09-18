@@ -10,8 +10,17 @@
 
 - A simple todo application made using the Django web framework
 
+##### Table of Contents
+ - [Features](#features)
+ - [Installation](#installation)
+ - [Testing](#testing)
+ - [Application Demo](#application-demo)
+ - [Screenshots](#screenshots)
+ - [Reporting Bugs](#reporting-bugs)
+
 ---
-## Features
+
+### Features
  - Application
      - Allow multiple users to logon, create, update and edit their own lists
      - User registration with email verification & social(GitHub) login
@@ -34,6 +43,8 @@
          - safety(python package vulnerability testing)
          - pytest sessions with coverage
 
+---
+
 ### Installation
  - `git clone https://github.com/kevinbowen777/djangdo.git`
  - `cd djangdo`
@@ -49,14 +60,24 @@
      - `docker-compose python manage.py createsuperuser`
  - Browse to http://127.0.0.1:8000 or http://127.0.0.1:8000/admin/
 
+---
+
 ### Testing
  - `docker-compose exec web python manage.py test`
+ - `coverage run -m pytest`
+ - Nox (includes sessions for black, lint, safety, tests)
+     - testing supported for Python 3.9, 3.10, 3.11
+     - e.g. `nox`, `nox -rs lint-3.11`, `nox -s tests`
 
-### Live Demo on Heroku:
+---
+
+### Application Demo
+A live application demonstration hosted at Heroku
  - [django-todo](https://kbowen-django-todo.herokuapp.com/)
 
 ---
-## Screenshots
+
+### Screenshots
 
 Home page
 ![Home Page](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_home.png)
@@ -68,8 +89,7 @@ List items
 ![List Items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_list_items.png)
 
 ---
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kevinbowen777/djangdo/blob/master/LICENSE)
----
+
 ### Reporting Bugs
 
    Visit the [Issues page](https://github.com/kevinbowen777/djangdo/issues)

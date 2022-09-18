@@ -1,11 +1,16 @@
-Djangdo - A Django ToDo web application
-=======================================
+Djangdo
+=======
 
 .. toctree::
    :hidden:
    :maxdepth: 1
 
    license
+
+.. contents:: Table of Contents
+   :local:
+   :backlinks: top
+   :depth: 2
 
 A simple todo application made using the Django 4.1.1 web framework
 
@@ -28,7 +33,7 @@ Features
    * Nox testing sessions for latest Python 3.9, 3.10, and 3.11
 
      * black
-     * Sphinx documentaion generations
+     * Sphinx documentaion generation
      * linting
        
        * flake8
@@ -36,11 +41,8 @@ Features
        * flake8-docstrings
        * flake8-import-order
        * safety(python package vulnerability testing)
+     * pytest sessions with coverage
 
- * User registration with email verification & social(GitHub) login
- * Bootstrap4 & crispy-forms decorations
- * Customizable user profiles with bio, profile picture & country flags
- * Nox testing sessions (black, linting, pytest, coverage, Sphinx doc generation)
 
 Installation
 ------------
@@ -53,8 +55,8 @@ run this command in your terminal:
    $ git clone https://github.com/kevinbowen777/djangdo.git
    $ cd djangdo
 
-Local install:
---------------
+Local installation
+------------------
 
 .. code-block:: console
 
@@ -64,8 +66,8 @@ Local install:
    $ python manage.py createsuperuser
    
 
-Docker install:
----------------
+Docker installation
+-------------------
 
 .. code-block:: console
 
@@ -98,8 +100,10 @@ Testing
    $ nox -rs lint-3.11
    $ nox -s tests
 
-Live Application Demonstration on Heroku
-----------------------------------------
+Application Demo
+----------------
+Live demonstration of application running on Heroku:
+
 `kbowen-django-todo <https://kbowen-django-todo.herokuapp.com/>`_
 
 Reporting Bugs
