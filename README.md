@@ -1,9 +1,9 @@
-## Djangdo 
+## django-todo 
 
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/djangdo.svg)](https://github.com/kevinbowen777/djangdo/issues)
+  [![GitHub Issues](https://img.shields.io/github/issues/kevinbowen777/django-todo.svg)](https://github.com/kevinbowen777/django-todo/issues)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -80,17 +80,17 @@ A live application demonstration hosted at Heroku
 ### Screenshots
 
 Home page
-![Home Page](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_home.png)
+![Home Page](https://github.com/kevinbowen777/django-todo/blob/master/images/djangdo_home.png)
 
 Add items
-![Add items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_add_new_item.png)
+![Add items](https://github.com/kevinbowen777/django-todo/blob/master/images/djangdo_add_new_item.png)
 
 List items
-![List Items](https://github.com/kevinbowen777/djangdo/blob/master/images/djangdo_list_items.png)
+![List Items](https://github.com/kevinbowen777/django-todo/blob/master/images/djangdo_list_items.png)
 
 ---
 
 ### Reporting Bugs
 
-   Visit the [Issues page](https://github.com/kevinbowen777/djangdo/issues)
+   Visit the [Issues page](https://github.com/kevinbowen777/django-todo/issues)
       to view currently open bug reports or open a new issue.

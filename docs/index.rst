@@ -1,4 +1,4 @@
-Djangdo
+django-todo
 =======
 
 .. toctree::
@@ -109,4 +109,4 @@ Live demonstration of application running on Heroku:
 Reporting Bugs
 --------------
 
-Visit the djangdo `Issues page <https://github.com/kevinbowen777/djangdo/issues>`_ on GitHub.
+Visit the djangdo `Issues page <https://github.com/kevinbowen777/django-todo/issues>`_ on GitHub.
