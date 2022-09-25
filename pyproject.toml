@@ -51,7 +51,7 @@ extend_skip = ["*.md", "*.json"]
 line_length = 79
 
 [tool.poetry]
-name = "djangdo"
+name = "django-todo"
 version = "0.1.0"
 description = "A simple todo application"
 authors = ["Kevin Bowen <kevin.bowen@gmail.com>"]
