@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     # Local applications
-    "djangdo.apps.DjangdoAppConfig",
+    "tasks.apps.TasksAppConfig",
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
 ]

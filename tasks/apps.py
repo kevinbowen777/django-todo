@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DjangdoAppConfig(AppConfig):
+class TasksAppConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "djangdo"
+    name = "tasks"

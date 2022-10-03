@@ -10,9 +10,9 @@ exclude = '''
   | alembic
   | staticfiles
   | accounts/migrations/0001_initial.py
-  | djangdo/migrations/0001_initial.py
-  | djangdo/migrations/0002_alter_todolist_owner.py
-  | djangdo/migrations/0003_alter_todolist_id.py
+  | tasks/migrations/0001_initial.py
+  | tasks/migrations/0002_alter_todolist_owner.py
+  | tasks/migrations/0003_alter_todolist_id.py
   | build
   | dist
   | ^.*\b(migrations)\b.*$
@@ -20,7 +20,7 @@ exclude = '''
 '''
 
 [tool.coverage.paths]
-source = ["accounts", "config", "djangdo"]
+source = ["accounts", "config", "tasks"]
 
 [tool.coverage.run]
 branch = true
@@ -42,13 +42,6 @@ omit = [
 
 [tool.coverage.report]
 show_missing = true
-
-[tool.isort]
-profile = "black"
-multi_line_output = 3
-skip = ["*.gitignore"]
-extend_skip = ["*.md", "*.json"]
-line_length = 79
 
 [tool.poetry]
 name = "django-todo"

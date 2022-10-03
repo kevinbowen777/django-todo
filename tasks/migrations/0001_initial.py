@@ -4,7 +4,7 @@ import django.db.models.deletion
 from django.conf import settings
 from django.db import migrations, models
 
-import djangdo.models
+import tasks.models
 
 
 class Migration(migrations.Migration):
@@ -58,14 +58,14 @@ class Migration(migrations.Migration):
                 (
                     "due_date",
                     models.DateTimeField(
-                        default=djangdo.models.one_week_hence
+                        default=tasks.models.one_week_hence
                     ),
                 ),
                 (
                     "todo_list",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="djangdo.todolist",
+                        to="tasks.todolist",
                     ),
                 ),
             ],

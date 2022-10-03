@@ -1,4 +1,4 @@
-"""URLs for the django-start template project."""
+"""URLs for the django-todo project."""
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -11,7 +11,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Local applications
     path("accounts/", include("accounts.urls")),
-    path("", include("djangdo.urls")),
+    path("", include("tasks.urls")),
     path("", include("pages.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
