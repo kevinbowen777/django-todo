@@ -3,7 +3,7 @@ from pathlib import Path
 
 from environs import Env
 
-# import socket  # noqa: E402 # Comment out if not using debug_toolbar
+# import socket # noqa: E402 # Comment out if not using debug_toolbar
 
 env = Env()
 env.read_env()
