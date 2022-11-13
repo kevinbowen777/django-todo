@@ -20,7 +20,7 @@ exclude = '''
 '''
 
 [tool.coverage.paths]
-source = ["accounts", "config", "tasks"]
+source = ["accounts", "config", "pages", "tasks"]
 
 [tool.coverage.run]
 branch = true
@@ -39,6 +39,12 @@ omit = [
     "*conftest.py",
     "*/extra*",
 ]
+plugins = [
+    "django_coverage_plugin",
+]
+
+[tool.coverage.django_coverage_plugin]
+template_extensions = "html, txt, tex, email"
 
 [tool.coverage.report]
 show_missing = true
@@ -67,7 +73,6 @@ gunicorn = "~=20.1.0"
 [tool.poetry.dev-dependencies]
 pylint = "^2.12.2"
 black = "^22.3.0"
-isort = "^5.10.1"
 flake8 = "^5.0.0"
 pre-commit = "^2.18.1"
 django-debug-toolbar = "^3.2.4"
@@ -90,6 +95,9 @@ safety = "^2.0.0"
 pip-check = "^2.7"
 pip-audit = "^2.4.3"
 Sphinx = "^5.1.1"
+
+[tool.poetry.group.dev.dependencies]
+django-coverage-plugin = "^2.0.4"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
