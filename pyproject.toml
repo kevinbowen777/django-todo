@@ -70,7 +70,7 @@ Pillow = "^9.1.1"
 whitenoise = "6.2.0"
 gunicorn = "~=20.1.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pylint = "^2.12.2"
 black = "^22.3.0"
 flake8 = "^5.0.0"
@@ -79,6 +79,7 @@ django-debug-toolbar = "^3.2.4"
 coverage = {extras = ["toml"], version = "^6.4.1"}
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
+django-coverage-plugin = "^2.0.4"
 django-test-plus = "^2.2.0"
 pytest-sugar = "^0.9.4"
 friendly = "^0.7.0"
@@ -95,9 +96,6 @@ safety = "^2.0.0"
 pip-check = "^2.7"
 pip-audit = "^2.4.3"
 Sphinx = "^5.1.1"
-
-[tool.poetry.group.dev.dependencies]
-django-coverage-plugin = "^2.0.4"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
