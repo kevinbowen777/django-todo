@@ -79,7 +79,7 @@ django-debug-toolbar = "^3.2.4"
 coverage = {extras = ["toml"], version = "^6.4.1"}
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
-django-coverage-plugin = "^2.0.4"
+django-coverage-plugin = "^3.0.0"
 django-test-plus = "^2.2.0"
 pytest-sugar = "^0.9.4"
 friendly = "^0.7.0"
