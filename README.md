@@ -85,21 +85,22 @@
 ---
 
 ### Application Demo
-A live application demonstration hosted at Heroku
- - [django-todo](https://kbowen-django-todo.herokuapp.com/)
+A live application demonstration:
+
+TBD
 
 ---
 
 ### Screenshots
 
 Home page
-![Home Page](https://github.com/kevinbowen777/django-todo/blob/master/images/djangdo_home.png)
+![Home Page](images/djangdo_home.png)
 
 Add items
-![Add items](https://github.com/kevinbowen777/django-todo/blob/master/images/djangdo_add_new_item.png)
+![Add items](images/djangdo_add_new_item.png)
 
 List items
-![List Items](https://github.com/kevinbowen777/django-todo/blob/master/images/djangdo_list_items.png)
+![List Items](images/djangdo_list_items.png)
 
 ---
 
