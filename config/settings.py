@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     # Third-party applications
     "bootstrap4",
     "crispy_forms",
+    "crispy_bootstrap4",
     # "debug_toolbar",
     "django_countries",
     "django_extensions",
@@ -182,6 +183,12 @@ CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
 
 # django-crispy-forms
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_CLASS_CONVERTERS = {
+    "textinput": "textinput textInput",
+    "fileinput": "fileinput fileUpload",
+    "passwordinput": "textinput textInput",
+}
 
 # media/file uploads URLs
 MEDIA_URL = "/media/"
