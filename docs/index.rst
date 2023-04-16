@@ -13,7 +13,7 @@ django-todo
    :backlinks: top
    :depth: 2
 
-A simple todo application made using the Django 4.1 web framework
+A simple todo application made using the Django 4.2.x web framework
 
 Features
 --------
