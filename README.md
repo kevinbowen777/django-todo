@@ -102,14 +102,20 @@ TBD
 
 ### Screenshots
 
-Home page
-![Home Page](images/djangdo_home.png)
+### Home page
+![Home Page](images/django-todo_homepage.png)
 
-Add items
-![Add items](images/djangdo_add_new_item.png)
+### Task Lists
+![Task Lists](images/django-todo_task_lists.png)
 
-List items
-![List Items](images/djangdo_list_items.png)
+### Task items
+![Task Items](images/django-todo_task_items.png)
+
+### Add new items
+![Add new items](images/django-todo_add_new_item.png)
+
+### Profile page
+![Profile page](images/django-todo_profile.png)
 
 ---
 
