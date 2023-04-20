@@ -7,6 +7,9 @@ django-todo
 
    license
    package_index
+   create_new_users
+   create_new_tasks
+
 
 .. contents:: Table of Contents
    :local:
