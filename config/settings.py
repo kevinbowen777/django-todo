@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     # Third-party applications
-    "bootstrap4",
     "crispy_forms",
     "crispy_bootstrap4",
     # "debug_toolbar",
