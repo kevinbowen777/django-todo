@@ -1,9 +1,9 @@
-from accounts.tests.factories import UserFactory
-
 from django.test import TestCase
 
-from .factories import ToDoListFactory
+from accounts.tests.factories import UserFactory
+
 from ..models import ToDoList  # noqa: F401
+from .factories import ToDoListFactory
 
 
 class ToDoListTests(TestCase):
