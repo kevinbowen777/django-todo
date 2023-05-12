@@ -113,13 +113,8 @@ Sphinx = "^7.0.0"
 coverage = {extras = ["toml"], version = "^7.0.0"}
 pytest-cov = "^4.0.0"
 pytest-django = "^4.5.2"
-flake8 = "^6.0.0"
-flake8-bandit = "^4.1.0"
-flake8-black = "^0.3.3"
-flake8-bugbear = "^23.0.0"
 flake8-docstrings = "^1.6.0"
 pylint = "^2.12.2"
-flake8-import-order = "^0.18.2"
 ruff = "^0.0.265"
 
 [tool.pytest.ini_options]
