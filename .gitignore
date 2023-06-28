@@ -1,12 +1,16 @@
 # updated 20220904
 # from: https://github.com/github/gitignore
 LOCAL_APP_NOTES
-
 docker-compose-prod.yml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Self-signed certs for running dev server with HTTPS
+cert.crt
+cert.key
 
 # C extensions
 *.so
