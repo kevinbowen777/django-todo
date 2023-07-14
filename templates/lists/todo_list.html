@@ -1,32 +1,37 @@
 {% extends "account/base.html" %}
 
-{% block title %}{{ todo_list.title }}{% endblock title %}
+{% block title %}
+  {{ todo_list.title }}
+{% endblock title %}
 
 {% block inner %}
-<div>
   <div>
     <div>
-      <h3>Edit list:</h3>
-      <h5><strong>{{ todo_list.title }}</strong></h5>
+      <div>
+        <h3>Edit list:</h3>
+        <h5>
+          <strong>{{ todo_list.title }}</strong>
+        </h5>
+      </div>
+      <ul>
+        {% for todo in object_list %}
+          <li>
+            <p>
+              <a class="btn btn-outline-dark"
+                 href="{% url 'item-update' todo_list.id todo.id %}">
+                {{ todo.title }}
+                (Due {{ todo.due_date | date:"l, F j" }})
+              </a>
+            </p>
+          </li>
+        {% empty %}
+          <p>There are no to-do items in this list.</p>
+        {% endfor %}
+      </ul>
+      <p>
+        <a class="btn btn-success" href="{% url 'item-add' todo_list.id %}">Add a new task item</a>
+        <a class="btn btn-danger" href="{% url 'list-delete' todo_list.id %}">Delete this task list</a>
+      </p>
     </div>
-    <ul>
-      {% for todo in object_list %}
-      <li>
-        <p>
-        <a class="btn btn-outline-dark" href="{% url 'item-update' todo_list.id todo.id %}">
-            {{ todo.title }}
-            (Due {{ todo.due_date | date:"l, F j" }})
-        </a>
-        </p>
-      </li>
-      {% empty %}
-      <p>There are no to-do items in this list.</p>
-      {% endfor %}
-    </ul>
-    <p>
-      <a class="btn btn-success" href="{% url 'item-add' todo_list.id %}">Add a new task item</a>
-      <a class="btn btn-danger" href="{% url 'list-delete' todo_list.id %}">Delete this task list</a>
-    </p>
   </div>
-</div>
 {% endblock inner %}
