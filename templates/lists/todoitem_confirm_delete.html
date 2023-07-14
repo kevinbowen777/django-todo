@@ -1,15 +1,19 @@
 {% extends "account/base.html" %}
 
-{% block title %}Delete Item{% endblock title %}
+{% block title %}
+  Delete Item
+{% endblock title %}
 
 {% block inner %}
-<h3>Delete To-do Item</h3>
-<p>Are you sure you want to delete the item: <b>{{ object.title }}</b>
-   from the list <i>{{ todo_list.title }}</i>?</p>
-<form method="POST">
-  {% csrf_token %}
-  <button class="btn btn-danger" type="submit">Yes, delete.</button>
-  <a class="btn btn-success" href="{% url 'list' todo_list.id %}">Cancel</a>
-</form>
+  <h3>Delete To-do Item</h3>
+  <p>
+    Are you sure you want to delete the item: <b>{{ object.title }}</b>
+    from the list <i>{{ todo_list.title }}</i>?
+  </p>
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Yes, delete.</button>
+    <a class="btn btn-success" href="{% url 'list' todo_list.id %}">Cancel</a>
+  </form>
 
 {% endblock inner %}
