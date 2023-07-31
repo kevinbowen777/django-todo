@@ -12,7 +12,7 @@ In the application directory, run the following command:
     $ python manage.py shell_plus
 
 Sample tasks list
------------------
+^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
