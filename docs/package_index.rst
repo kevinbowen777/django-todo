@@ -2,7 +2,7 @@ Package Index
 =============
 
 The following is a list of the primary Python packages being used for
-the django-todo_ application.
+the django-start_ application.
 For a complete list of packages explicitly added to the project, view the
 pyproject.toml_ file. For a list of *all* of the package, see the requirements.txt_ file.
 
@@ -121,6 +121,15 @@ django-debug-toolbar
   * PyPI package: https://pypi.org/project/django-debug-toolbar/
   * Notes: See config/settings.py for instructions to enable
 
+django-types
+^^^^^^^^^^^^
+
+  * Documentation: https://github.com/sbdchd/django-types#readme
+  * Tutorial:
+  * Repository: https://github.com/sbdchd/django-types
+  * PyPI package: https://pypi.org/project/django-types
+  * Notes: Type stubs for Django
+
 factory-boy
 ^^^^^^^^^^^
 
@@ -222,6 +231,6 @@ friendly
 
 TODO: Add link to local coverage reports
 
- .. _django-todo: https://github.com/kevinbowen777/django-todo/
- .. _pyproject.toml: https://github.com/kevinbowen777/django-todo/blob/master/pyproject.toml  
- .. _requirements.txt: https://github.com/kevinbowen777/django-todo/blob/master/requirements.txt
+ .. _django-start: https://github.com/kevinbowen777/django-start/
+ .. _pyproject.toml: https://github.com/kevinbowen777/django-start/blob/master/pyproject.toml  
+ .. _requirements.txt: https://github.com/kevinbowen777/django-start/blob/master/requirements.txt
