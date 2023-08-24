@@ -23,9 +23,7 @@ class CustomUserTests(TestCase):
         assert str(self.user) == self.user.username
 
     def test_user_get_absolute_url(self):
-        assert (
-            self.user.get_absolute_url() == f"/accounts/{self.user.username}/"
-        )
+        assert self.user.get_absolute_url() == f"/accounts/{self.user.username}/"
 
     def test_create_user(self):
         self.assertEqual(self.user.username, "kevin")
@@ -70,7 +68,6 @@ class CustomUserTests(TestCase):
 
 
 class SignupTests(TestCase):
-
     username = "newuser"
     email = "newuser@example.com"
 
@@ -87,11 +84,9 @@ class SignupTests(TestCase):
     def test_signup_form(self):
         new_user = get_user_model().objects.create_user(  # noqa:F841
             self.username, self.email
-        )  # noqa: F841
-        self.assertEqual(get_user_model().objects.all().count(), 1)
-        self.assertEqual(
-            get_user_model().objects.all()[0].username, self.username
         )
+        self.assertEqual(get_user_model().objects.all().count(), 1)
+        self.assertEqual(get_user_model().objects.all()[0].username, self.username)
         self.assertEqual(get_user_model().objects.all()[0].email, self.email)
 
 
@@ -143,9 +138,7 @@ class PasswordResetDoneTests(TestCase):
 
     def test_password_reset_done_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(
-            self.response, "account/password_reset_done.html"
-        )
+        self.assertTemplateUsed(self.response, "account/password_reset_done.html")
         self.assertContains(self.response, "We have sent you an e-mail")
         self.assertNotContains(self.response, "This does not belong here.")
 
@@ -162,7 +155,7 @@ class PasswordChangeFormTests(TestCase):
         """
         self.assertEqual(self.response.status_code, 302)
         # self.assertTemplateUsed(self.response,
-        # "account/password_change.html")  # noqa:E501,B950
+        # "account/password_change.html")
         # self.assertContains(self.response, "Change Password")
         # self.assertNotContains(self.response, "This does not belong here.")
 
@@ -174,8 +167,6 @@ class PasswordChangeDoneTests(TestCase):
 
     def test_password_change_done_template(self):
         self.assertEqual(self.response.status_code, 200)
-        self.assertTemplateUsed(
-            self.response, "account/password_reset_done.html"
-        )
+        self.assertTemplateUsed(self.response, "account/password_reset_done.html")
         self.assertContains(self.response, "We have sent you an e-mail")
         self.assertNotContains(self.response, "This does not belong here.")

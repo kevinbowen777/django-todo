@@ -8,7 +8,6 @@ import tasks.models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -57,9 +56,7 @@ class Migration(migrations.Migration):
                 ("created_date", models.DateTimeField(auto_now_add=True)),
                 (
                     "due_date",
-                    models.DateTimeField(
-                        default=tasks.models.one_week_hence
-                    ),
+                    models.DateTimeField(default=tasks.models.one_week_hence),
                 ),
                 (
                     "todo_list",
