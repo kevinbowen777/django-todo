@@ -872,13 +872,13 @@ doc = ["Sphinx", "sphinx-rtd-theme", "sphinxcontrib-spelling"]
 
 [[package]]
 name = "faker"
-version = "19.3.0"
+version = "19.3.1"
 description = "Faker is a Python package that generates fake data for you."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "Faker-19.3.0-py3-none-any.whl", hash = "sha256:bee54278d6e1289573317604ab6f4782acca724396bf261eaf1890de228e553d"},
-    {file = "Faker-19.3.0.tar.gz", hash = "sha256:7d6ed00de3eef9bd57504500c67ee034cab959e4248f9c24aca33e08af82ca93"},
+    {file = "Faker-19.3.1-py3-none-any.whl", hash = "sha256:e2722fdf622cf24e974aaba15a3dee97a6f8b98d869bd827ff1af9c87695af46"},
+    {file = "Faker-19.3.1.tar.gz", hash = "sha256:a6624d9574623bb27dfca33fff94581cd7b23b562901db8ad59acbde9a52543e"},
 ]
 
 [package.dependencies]
@@ -2287,13 +2287,13 @@ files = [
 
 [[package]]
 name = "sphinx"
-version = "7.2.2"
+version = "7.2.3"
 description = "Python documentation generator"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "sphinx-7.2.2-py3-none-any.whl", hash = "sha256:ed33bc597dd8f05cd37118f64cbac0b8bf773389a628ddfe95ab9e915c9308dc"},
-    {file = "sphinx-7.2.2.tar.gz", hash = "sha256:1c0abe6d4de7a6b2c2b109a2e18387bf27b240742e1b34ea42ac3ed2ac99978c"},
+    {file = "sphinx-7.2.3-py3-none-any.whl", hash = "sha256:6379ea22c49955a44ed4e62bde8c94575e9544303cc0554eaa97099ae5853a3a"},
+    {file = "sphinx-7.2.3.tar.gz", hash = "sha256:ece68bb4d77b7dc090573825db45a6f9183e74098d1c21573485de250b1d1e3f"},
 ]
 
 [package.dependencies]
@@ -2312,7 +2312,7 @@ sphinxcontrib-devhelp = "*"
 sphinxcontrib-htmlhelp = ">=2.0.0"
 sphinxcontrib-jsmath = "*"
 sphinxcontrib-qthelp = "*"
-sphinxcontrib-serializinghtml = ">=1.1.5"
+sphinxcontrib-serializinghtml = ">=1.1.9"
 
 [package.extras]
 docs = ["sphinxcontrib-websupport"]
@@ -2635,13 +2635,13 @@ watchdog = ["watchdog (>=2.3)"]
 
 [[package]]
 name = "whitenoise"
-version = "6.3.0"
+version = "6.5.0"
 description = "Radically simplified static file serving for WSGI applications"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "whitenoise-6.3.0-py3-none-any.whl", hash = "sha256:cf8ecf56d86ba1c734fdb5ef6127312e39e92ad5947fef9033dc9e43ba2777d9"},
-    {file = "whitenoise-6.3.0.tar.gz", hash = "sha256:fe0af31504ab08faa1ec7fc02845432096e40cc1b27e6a7747263d7b30fb51fa"},
+    {file = "whitenoise-6.5.0-py3-none-any.whl", hash = "sha256:16468e9ad2189f09f4a8c635a9031cc9bb2cdbc8e5e53365407acf99f7ade9ec"},
+    {file = "whitenoise-6.5.0.tar.gz", hash = "sha256:15fe60546ac975b58e357ccaeb165a4ca2d0ab697e48450b8f0307ca368195a8"},
 ]
 
 [package.extras]
@@ -2734,4 +2734,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "0243b2c22d64d1441b8609d36fc693d36b345ae76b305acc379e740e3a23714a"
+content-hash = "8c3d8d6453c5cd1dee7a43ce7f4a640e27f8ef7138204bec8c9575f94f9f13e6"
