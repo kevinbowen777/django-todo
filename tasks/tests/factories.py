@@ -11,7 +11,7 @@ from ..models import ToDoItem, ToDoList
 
 
 class ToDoListFactory(factory.django.DjangoModelFactory):
-    title = factory.fuzzy.FuzzyText(length=12, prefix="ToDo List ")
+    title = factory.fuzzy.FuzzyText(length=12, prefix="ToDo List: ")
     # date = factory.fuzzy.FuzzyDate(datetime.date(2022, 11, 11))
     date = dt.now()
     owner = factory.SubFactory(UserFactory)
@@ -21,12 +21,12 @@ class ToDoListFactory(factory.django.DjangoModelFactory):
 
 
 class ToDoItemFactory(factory.django.DjangoModelFactory):
-    title = factory.fuzzy.FuzzyText(length=12, prefix="ToDo Item ")
-    description = factory.fuzzy.FuzzyText(length=12, prefix="ToDo List ")
+    title = factory.fuzzy.FuzzyText(length=12, prefix="ToDo Item: ")
+    description = factory.fuzzy.FuzzyText(length=12, prefix="Item to complete: ")
     # Is there any way in Factory boy to create a 'now' date?
     # created_date = factory.fuzzy.FuzzyDate(datetime.date(2022, 11, 11))
-    # created_date = dt.now()
     # due_date = dt.now()
+    created_date = dt.now()
     due_date = timezone.now() + timezone.timedelta(days=7)
     todo_list = factory.SubFactory(ToDoListFactory)
 

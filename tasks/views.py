@@ -35,25 +35,24 @@ class ItemListView(LoginRequiredMixin, ListView):
     paginate_by = 5
 
 
-class ListCreate(LoginRequiredMixin, CreateView):
+class ListCreateView(LoginRequiredMixin, CreateView):
     model = ToDoList
     fields = ["title"]
     template_name = "lists/todolist_new.html"
 
+    """
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
+    """
 
-
-"""
     def get_context_data(self):
-        context = super(ListCreate, self).get_context_data()
+        context = super(ListCreateView, self).get_context_data()
         context["title"] = "Add a new list"
         return context
-"""
 
 
-class ItemCreate(LoginRequiredMixin, CreateView):
+class ItemCreateView(LoginRequiredMixin, CreateView):
     model = ToDoItem
     fields = [
         "todo_list",
@@ -64,13 +63,13 @@ class ItemCreate(LoginRequiredMixin, CreateView):
     template_name = "lists/todoitem_new.html"
 
     def get_initial(self):
-        initial_data = super(ItemCreate, self).get_initial()
+        initial_data = super(ItemCreateView, self).get_initial()
         todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         initial_data["todo_list"] = todo_list
         return initial_data
 
     def get_context_data(self):
-        context = super(ItemCreate, self).get_context_data()
+        context = super(ItemCreateView, self).get_context_data()
         todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         context["todo_list"] = todo_list
         context["title"] = "Create a new item"
@@ -80,7 +79,7 @@ class ItemCreate(LoginRequiredMixin, CreateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ItemUpdate(LoginRequiredMixin, UpdateView):
+class ItemUpdateView(LoginRequiredMixin, UpdateView):
     model = ToDoItem
     fields = [
         "todo_list",
@@ -91,7 +90,7 @@ class ItemUpdate(LoginRequiredMixin, UpdateView):
     template_name = "lists/todoitem_new.html"
 
     def get_context_data(self):
-        context = super(ItemUpdate, self).get_context_data()
+        context = super(ItemUpdateView, self).get_context_data()
         context["todo_list"] = self.object.todo_list
         context["title"] = "Edit item"
         return context
@@ -100,7 +99,7 @@ class ItemUpdate(LoginRequiredMixin, UpdateView):
         return reverse("list", args=[self.object.todo_list_id])
 
 
-class ListDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class ListDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = ToDoList
     template_name = "lists/todolist_confirm_delete.html"
     success_url = reverse_lazy("home")
@@ -110,13 +109,16 @@ class ListDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return obj.owner == self.request.user
 
 
-class ItemDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+# class ItemDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class ItemDeleteView(LoginRequiredMixin, DeleteView):
     model = ToDoItem
     template_name = "lists/todoitem_confirm_delete.html"
 
+    """
     def test_func(self):
         obj = self.get_object()
         return obj.todo_list.owner == self.request.user
+    """
 
     def get_success_url(self):
         return reverse_lazy("list", args=[self.kwargs["list_id"]])
