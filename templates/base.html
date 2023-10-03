@@ -1,6 +1,6 @@
 {% load static %}
-
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -49,17 +49,19 @@
           {% if user.is_authenticated %}
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="btn btn-outline-light" dropdown-toggle" href="#"
-                  id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  {{ user.username }}
-                </a>
+                <a class="btn btn-outline-light dropdown-toggle"
+                   href="#"
+                   id="navbarDropdown"
+                   role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true"
+                   aria-expanded="false">{{ user.username }}</a>
                 <div class="dropdown-menu dropdown-menu-lg-right"
                      aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{% url 'user_detail' user.username %}">My Profile</a>
                   <a class="dropdown-item" href="{% url 'account_set_password' %}">Change password</a>
                   <a class="dropdown-item" href="{% url 'account_reset_password' %}">Forgot password?</a>
-                  <a class="dropdown-item" href="{% url 'account_email' %}">Change E-mail</a>
+                  <a class="dropdown-item" href="{% url 'account_email' %}">Change email</a>
                   <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>
                   <a class="dropdown-item" href="{% url 'about' %}">About</a>
                 </div>
