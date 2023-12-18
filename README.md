@@ -8,7 +8,7 @@
 
 </div>
 
-- A simple todo application made using the Django 4.2.x web framework
+- A simple todo application made using the Django 5.0.x web framework
 
 ##### Table of Contents
  - [Features](#features)
