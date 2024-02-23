@@ -1,4 +1,5 @@
 """Nox sessions - django-todo."""
+
 import tempfile
 
 import nox
