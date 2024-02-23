@@ -1,4 +1,5 @@
 """Settings for the kbowen-django-todo template project."""
+
 from pathlib import Path
 
 from environs import Env
