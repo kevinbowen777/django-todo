@@ -16,7 +16,7 @@ Features
    * coverage_ reports are available on the web.
    * django-debug-toolbar_ available. See notes in `config/settings.py` for enabling.
    * Examples of using factories_ & pytest_ fixtures in account app testing.
-   * shell_plus_ with IPython_ via the django-extensions_ package.
+   * shell_plus_ via the django-extensions_ package.
    * pre-commit_
    * nox_ testing sessions for latest Python 3.10, 3.11, 3.12, 3.13.
 
@@ -45,7 +45,6 @@ If you get tired of typing ``./run`` you can always create a shell alias with ``
  .. _factories: https://pypi.org/project/factory-boy/
  .. _pytest: https://pypi.org/project/pytest/
  .. _shell_plus: https://django-extensions.readthedocs.io/en/latest/shell_plus.html
- .. _IPython: https://pypi.org/project/ipython/
  .. _django-extensions: https://pypi.python.org/pypi/django-extensions/
  .. _pre-commit: https://github.com/pre-commit/pre-commit
  .. _nox: https://pypi.org/project/nox/
