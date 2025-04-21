@@ -1,7 +1,7 @@
 django-todo
 ===========
 
-The django-todo_ project is a web to-do  application built using the Django 5.1.x web application framework and is part of the collection of `Web Framework Projects`_ assembled by Kevin Bowen.
+The django-todo_ project is a web to-do  application built using the Django 5.2.x web application framework and is part of the collection of `Web Framework Projects`_ assembled by Kevin Bowen.
 
 .. _django-todo: https://github.com/kevinbowen777/django-todo
 .. _Web Framework Projects: https://github.com/kevinbowen777/web-project-index
