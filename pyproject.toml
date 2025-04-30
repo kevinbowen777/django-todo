@@ -1,6 +1,6 @@
 [project]
 name = "django-todo"
-version = "0.3.2"
+version = "0.3.3"
 description = "A simple todo application"
 requires-python = ">=3.11.0, <3.14.0"
 dependencies = [
