@@ -4,7 +4,7 @@ version = "0.3.3"
 description = "A simple todo application"
 requires-python = ">=3.11.0, <3.14.0"
 dependencies = [
-    "Django (==5.2.4)",
+    "Django (==5.2.5)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=4.1.0, <4.2.0)",
@@ -71,7 +71,7 @@ werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=24.0, <26.0"
 furo = ">=2024.0, <2025.0"
 django-types = ">=0.22.0, <0.23.0"
-pylint = "3.3.7"
+pylint = "3.3.8"
 pip-audit = "^2.9.0"
 
 [tool.poetry.requires-plugins]
