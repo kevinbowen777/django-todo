@@ -44,14 +44,14 @@ tests = ["mypy (>=1.14.0)", "pytest", "pytest-asyncio"]
 
 [[package]]
 name = "astroid"
-version = "3.3.11"
+version = "4.0.4"
 description = "An abstract syntax tree for Python with inference support."
 optional = false
-python-versions = ">=3.9.0"
+python-versions = ">=3.10.0"
 groups = ["dev"]
 files = [
-    {file = "astroid-3.3.11-py3-none-any.whl", hash = "sha256:54c760ae8322ece1abd213057c4b5bba7c49818853fc901ef09719a60dbf9dec"},
-    {file = "astroid-3.3.11.tar.gz", hash = "sha256:1e5a5011af2920c7c67a53f65d536d65bfa7116feeaf2354d8b94f29573bb0ce"},
+    {file = "astroid-4.0.4-py3-none-any.whl", hash = "sha256:52f39653876c7dec3e3afd4c2696920e05c83832b9737afc21928f2d2eb7a753"},
+    {file = "astroid-4.0.4.tar.gz", hash = "sha256:986fed8bcf79fb82c78b18a53352a0b287a73817d6dbcfba3162da36667c49a0"},
 ]
 
 [[package]]
@@ -1088,25 +1088,26 @@ sphinx-basic-ng = ">=1.0.0b2"
 
 [[package]]
 name = "gunicorn"
-version = "23.0.0"
+version = "25.1.0"
 description = "WSGI HTTP Server for UNIX"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "gunicorn-23.0.0-py3-none-any.whl", hash = "sha256:ec400d38950de4dfd418cff8328b2c8faed0edb0d517d3394e457c317908ca4d"},
-    {file = "gunicorn-23.0.0.tar.gz", hash = "sha256:f014447a0101dc57e294f6c18ca6b40227a4c90e9bdb586042628030cba004ec"},
+    {file = "gunicorn-25.1.0-py3-none-any.whl", hash = "sha256:d0b1236ccf27f72cfe14bce7caadf467186f19e865094ca84221424e839b8b8b"},
+    {file = "gunicorn-25.1.0.tar.gz", hash = "sha256:1426611d959fa77e7de89f8c0f32eed6aa03ee735f98c01efba3e281b1c47616"},
 ]
 
 [package.dependencies]
 packaging = "*"
 
 [package.extras]
-eventlet = ["eventlet (>=0.24.1,!=0.36.0)"]
-gevent = ["gevent (>=1.4.0)"]
+eventlet = ["eventlet (>=0.40.3)"]
+gevent = ["gevent (>=24.10.1)"]
+http2 = ["h2 (>=4.1.0)"]
 setproctitle = ["setproctitle"]
-testing = ["coverage", "eventlet", "gevent", "pytest", "pytest-cov"]
-tornado = ["tornado (>=0.2)"]
+testing = ["coverage", "eventlet (>=0.40.3)", "gevent (>=24.10.1)", "h2 (>=4.1.0)", "httpx[http2]", "pytest", "pytest-asyncio", "pytest-cov", "uvloop (>=0.19.0)"]
+tornado = ["tornado (>=6.5.0)"]
 
 [[package]]
 name = "humanize"
@@ -1179,14 +1180,14 @@ files = [
 
 [[package]]
 name = "isort"
-version = "6.1.0"
+version = "7.0.0"
 description = "A Python utility / library to sort Python imports."
 optional = false
-python-versions = ">=3.9.0"
+python-versions = ">=3.10.0"
 groups = ["dev"]
 files = [
-    {file = "isort-6.1.0-py3-none-any.whl", hash = "sha256:58d8927ecce74e5087aef019f778d4081a3b6c98f15a80ba35782ca8a2097784"},
-    {file = "isort-6.1.0.tar.gz", hash = "sha256:9b8f96a14cfee0677e78e941ff62f03769a06d412aabb9e2a90487b3b7e8d481"},
+    {file = "isort-7.0.0-py3-none-any.whl", hash = "sha256:1bcabac8bc3c36c7fb7b98a76c8abb18e0f841a3ba81decac7691008592499c1"},
+    {file = "isort-7.0.0.tar.gz", hash = "sha256:5513527951aadb3ac4292a41a16cbc50dd1642432f5e8c20057d414bdafb4187"},
 ]
 
 [package.extras]
@@ -1507,14 +1508,14 @@ files = [
 
 [[package]]
 name = "nox"
-version = "2025.11.12"
+version = "2026.2.9"
 description = "Flexible test automation."
 optional = false
 python-versions = ">=3.8"
 groups = ["dev"]
 files = [
-    {file = "nox-2025.11.12-py3-none-any.whl", hash = "sha256:707171f9f63bc685da9d00edd8c2ceec8405b8e38b5fb4e46114a860070ef0ff"},
-    {file = "nox-2025.11.12.tar.gz", hash = "sha256:3d317f9e61f49d6bde39cf2f59695bb4e1722960457eee3ae19dacfe03c07259"},
+    {file = "nox-2026.2.9-py3-none-any.whl", hash = "sha256:1b7143bc8ecdf25f2353201326152c5303ae4ae56ca097b1fb6179ad75164c47"},
+    {file = "nox-2026.2.9.tar.gz", hash = "sha256:1bc8a202ee8cd69be7aaada63b2a7019126899a06fc930a7aee75585bf8ee41b"},
 ]
 
 [package.dependencies]
@@ -1523,7 +1524,7 @@ attrs = ">=24.1"
 colorlog = ">=2.6.1,<7"
 dependency-groups = ">=1.1"
 humanize = ">=4"
-packaging = {version = ">=21", markers = "python_version >= \"3.10\""}
+packaging = ">=22"
 virtualenv = {version = ">=20.15", markers = "python_version >= \"3.10\""}
 
 [package.extras]
@@ -1961,24 +1962,24 @@ windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "pylint"
-version = "3.3.8"
+version = "4.0.4"
 description = "python code static checker"
 optional = false
-python-versions = ">=3.9.0"
+python-versions = ">=3.10.0"
 groups = ["dev"]
 files = [
-    {file = "pylint-3.3.8-py3-none-any.whl", hash = "sha256:7ef94aa692a600e82fabdd17102b73fc226758218c97473c7ad67bd4cb905d83"},
-    {file = "pylint-3.3.8.tar.gz", hash = "sha256:26698de19941363037e2937d3db9ed94fb3303fdadf7d98847875345a8bb6b05"},
+    {file = "pylint-4.0.4-py3-none-any.whl", hash = "sha256:63e06a37d5922555ee2c20963eb42559918c20bd2b21244e4ef426e7c43b92e0"},
+    {file = "pylint-4.0.4.tar.gz", hash = "sha256:d9b71674e19b1c36d79265b5887bf8e55278cbe236c9e95d22dc82cf044fdbd2"},
 ]
 
 [package.dependencies]
-astroid = ">=3.3.8,<=3.4.0.dev0"
+astroid = ">=4.0.2,<=4.1.dev0"
 colorama = {version = ">=0.4.5", markers = "sys_platform == \"win32\""}
 dill = [
     {version = ">=0.3.7", markers = "python_version >= \"3.12\""},
     {version = ">=0.3.6", markers = "python_version == \"3.11\""},
 ]
-isort = ">=4.2.5,<5.13 || >5.13,<7"
+isort = ">=5,<5.13 || >5.13,<8"
 mccabe = ">=0.6,<0.8"
 platformdirs = ">=2.2"
 tomlkit = ">=0.10.1"
@@ -2900,4 +2901,4 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11.0, <3.15.0"
-content-hash = "745faceb804b6908939230b11dce48b8cc8c4d7dfdef7034df40f1e1ac8a7763"
+content-hash = "87a01da10f57ff95f9bf5837997680182c278222d6a2cc8d9eafc7c9760ac7a0"

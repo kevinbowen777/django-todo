@@ -76,7 +76,7 @@
             <a id="nextFileLink" class="nav" href="z_5039316f7068a85f_test_views_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.4">coverage.py v7.13.4</a>,
-            created at 2026-02-09 11:41 -0800
+            created at 2026-02-17 20:57 -0800
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -104,12 +104,12 @@
     <p class="pln"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t"><span class="key">def</span> <span class="nam">test_todolist__get_absolute_url</span><span class="op">(</span><span class="nam">todolist</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs12" class="ctx">(empty)</label></span></p>
     <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t">    <span class="nam">url</span> <span class="op">=</span> <span class="nam">todolist</span><span class="op">.</span><span class="nam">get_absolute_url</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><input type="checkbox" id="ctxs13"><span class="r"><label for="ctxs13" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
-    <p class="run"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">    <span class="key">assert</span> <span class="nam">url</span> <span class="op">==</span> <span class="fst">f"</span><span class="fst">/list/</span><span class="op">{</span><span class="nam">todolist</span><span class="op">.</span><span class="nam">id</span><span class="op">}</span><span class="fst">/</span><span class="fst">"</span>&nbsp;</span><input type="checkbox" id="ctxs14"><span class="r"><label for="ctxs14" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
+    <p class="run"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">    <span class="key">assert</span> <span class="nam">url</span> <span class="op">==</span> <span class="str">f"/list/{todolist.id}/"</span>&nbsp;</span><input type="checkbox" id="ctxs14"><span class="r"><label for="ctxs14" class="ctx">1 ctx</label></span><span class="ctxs">1c</span></p>
     <p class="pln"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t"><span class="key">def</span> <span class="nam">test_todoitem__str__</span><span class="op">(</span><span class="nam">todoitem</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs17" class="ctx">(empty)</label></span></p>
-    <p class="run"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">    <span class="key">assert</span> <span class="nam">todoitem</span><span class="op">.</span><span class="nam">__str__</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="fst">f"</span><span class="op">{</span><span class="nam">todoitem</span><span class="op">.</span><span class="nam">title</span><span class="op">}</span><span class="fst">: due </span><span class="op">{</span><span class="nam">todoitem</span><span class="op">.</span><span class="nam">due_date</span><span class="op">}</span><span class="fst">"</span>&nbsp;</span><input type="checkbox" id="ctxs18"><span class="r"><label for="ctxs18" class="ctx">1 ctx</label></span><span class="ctxs">1d</span></p>
-    <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="key">assert</span> <span class="nam">str</span><span class="op">(</span><span class="nam">todoitem</span><span class="op">)</span> <span class="op">==</span> <span class="fst">f"</span><span class="op">{</span><span class="nam">todoitem</span><span class="op">.</span><span class="nam">title</span><span class="op">}</span><span class="fst">: due </span><span class="op">{</span><span class="nam">todoitem</span><span class="op">.</span><span class="nam">due_date</span><span class="op">}</span><span class="fst">"</span>&nbsp;</span><input type="checkbox" id="ctxs19"><span class="r"><label for="ctxs19" class="ctx">1 ctx</label></span><span class="ctxs">1d</span></p>
+    <p class="run"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">    <span class="key">assert</span> <span class="nam">todoitem</span><span class="op">.</span><span class="nam">__str__</span><span class="op">(</span><span class="op">)</span> <span class="op">==</span> <span class="str">f"{todoitem.title}: due {todoitem.due_date}"</span>&nbsp;</span><input type="checkbox" id="ctxs18"><span class="r"><label for="ctxs18" class="ctx">1 ctx</label></span><span class="ctxs">1d</span></p>
+    <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">    <span class="key">assert</span> <span class="nam">str</span><span class="op">(</span><span class="nam">todoitem</span><span class="op">)</span> <span class="op">==</span> <span class="str">f"{todoitem.title}: due {todoitem.due_date}"</span>&nbsp;</span><input type="checkbox" id="ctxs19"><span class="r"><label for="ctxs19" class="ctx">1 ctx</label></span><span class="ctxs">1d</span></p>
     <p class="pln"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t"><span class="key">def</span> <span class="nam">test_todoitem_get_absolute_url</span><span class="op">(</span><span class="nam">rf</span><span class="op">,</span> <span class="nam">todoitem</span><span class="op">,</span> <span class="nam">todolist</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"><label for="ctxs22" class="ctx">(empty)</label></span></p>
@@ -129,7 +129,7 @@
             <a class="nav" href="z_5039316f7068a85f_test_views_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.13.4">coverage.py v7.13.4</a>,
-            created at 2026-02-09 11:41 -0800
+            created at 2026-02-17 20:57 -0800
         </p>
     </div>
 </footer>
