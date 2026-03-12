@@ -4,7 +4,7 @@ version = "0.3.3"
 description = "A simple todo application"
 requires-python = ">=3.11.0"
 dependencies = [
-    "Django (==5.2.11)",
+    "Django (==5.2.12)",
     "django-allauth (>=65.0, <66.0.0)",
     "environs[django] (>=11.0, <15.0)",
     "django-extensions (>=4.1.0, <4.2.0)",
@@ -14,7 +14,7 @@ dependencies = [
     "gunicorn (>=25.1.0, <26.0.0)",
     # crispy-bootstrap4 uses calver, so version is unclamped
     "crispy-bootstrap4 (>=2024.10)",
-    "django-crispy-forms (>=2.5, <2.6)",
+    "django-crispy-forms (>=2.6, <2.7)",
     "django-countries (>=8.2, <8.3)",
 ]
 authors = [
@@ -75,7 +75,7 @@ werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=24.0, <26.0"
 furo = ">=2024.0, <2025.0"
 django-types = ">=0.23.0, <0.24.0"
-pylint = "4.0.4"
+pylint = "4.0.5"
 pip-audit = "^2.9.0"
 
 [tool.poetry.requires-plugins]
