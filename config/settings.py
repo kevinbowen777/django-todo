@@ -129,14 +129,20 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
 STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
 # Default primary key field type
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
 
@@ -207,7 +213,7 @@ CRISPY_CLASS_CONVERTERS = {
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-ADMINS = [("Kevin Bowen", "kevinbowen@protonmail.com")]
+ADMINS = ["kevinbowen@protonmail.com"]
 MANAGERS = ADMINS
 
 # LOGGING
