@@ -1,11 +1,11 @@
 [project]
 name = "django-todo"
-version = "0.3.4"
+version = "0.3.5"
 description = "A simple todo application"
 requires-python = ">=3.12.0"
 dependencies = [
     "Django (==6.0.8)",
-    "django-allauth (==65.19.0)",
+    "django-allauth (==65.19.1)",
     "environs[django] (==15.1.0)",
     "django-extensions (==4.1.0)",
     "whitenoise (==6.12.0)",
@@ -73,8 +73,9 @@ werkzeug = ">=3.1, <4.0"
 pyopenssl = ">=26.0, <27.0"
 furo = "2025.12.19"
 django-types = ">=0.24.0, <0.25.0"
-pylint = "4.0.6"
+pylint = "4.0.7"
 pip-audit = "^2.9.0"
+towncrier = "25.8.0"
 
 [tool.poetry.requires-plugins]
 poetry-plugin-export = ">=1.10.0"
@@ -274,6 +275,64 @@ docstring-code-format = false
 # enabled.
 docstring-code-line-length = "dynamic"
 
+[tool.towncrier]
+directory = "changelog/"
+filename = "CHANGELOG.rst"
+
+title_format = "django-todo {version} ({project_date})"
+issue_format = "`#{issue} <https://github.com/kevinbowen777/django-todo/{issue}>`_"
+template = "changelog/_template.rst"
+
+[[tool.towncrier.type]]
+# Something we deemed an improper undesired behavior that got corrected
+# in the release to match pre-agreed expectations.
+directory = "bugfix"
+name = "Bug fixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Changes that affects the contributor experience. e.g. running tests,
+# building the docs, setting up the development environment.
+directory = "contrib"
+name = "Contributor-facing changes"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Declarations of future API removals and breaking changes in behavior.
+directory = "deprecation"
+name = "Deprecations (removal in next major release)"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Notable updates to the documentation structure or build process.
+directory = "doc"
+name = "Improved documentation"
+showcontent = true
+
+[[tool.towncrier.type]]
+# New behaviors, public APIs, etc.
+directory = "feature"
+name = "New features"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Changes that are hard to assign to any of the above categories.
+directory = "misc"
+name = "Miscellaneous internal changes"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Stuff that affects security. e.g. updating packages,
+directory = "security"
+name = "Security updated"
+showcontent = true
+
+[[tool.towncrier.type]]
+# Updates regarding bundling dependencies
+directory = "vendor"
+name = "Vendored libraries"
+showcontent = true
+
 [build-system]
-requires = ["poetry-core>=2.0.0"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
