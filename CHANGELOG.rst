@@ -27,6 +27,42 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-todo 0.3.6 (2026-09-05)
+==============================
+
+Contributor-facing changes
+--------------------------
+
+-  (`#638 <https://github.com/kevinbowen777/django-todo/638>`_): Initial zizmor remediation. Pin GitHub actions to hashes.
+
+-  (`#640 <https://github.com/kevinbowen777/django-todo/640>`_): Update testing to Python 3.14.7, 3.13.15, and 3.12.14
+
+-  (`#640 <https://github.com/kevinbowen777/django-todo/640>`_): Update django-debug-toolbar to 7.1.1
+
+-  (`#640 <https://github.com/kevinbowen777/django-todo/640>`_): Update gunicorn to 26.1.0
+
+-  (`#640 <https://github.com/kevinbowen777/django-todo/640>`_),  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Update nox to 2026.8.17
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Upgrade to environs to 15.2.0
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Update psycopg to 3.3.5
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Update towncrier to 26.9.0
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Update djlint to 1.45.2
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Update django-allauth to 65.19.2
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Update django-debug-toolbar to 8.0.0
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Upgrade to gunicorn to 26.2.0
+
+
+New features
+------------
+
+-  (`#645 <https://github.com/kevinbowen777/django-todo/645>`_): Upgrade to Django 6.1.1
+
 django-todo 0.3.5 (2026-08-13)
 ==============================
 
