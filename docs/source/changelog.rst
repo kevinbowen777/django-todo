@@ -27,6 +27,30 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-todo 0.3.8 (2026-10-11)
+==============================
+
+Security updated
+----------------
+
+-  (`#653 <https://github.com/kevinbowen777/django-todo/653>`_): Update django-allauth to 65.19.7
+
+-  (`#654 <https://github.com/kevinbowen777/django-todo/654>`_): Update Django to 6.1.2
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#650 <https://github.com/kevinbowen777/django-todo/650>`_): Fix Factory DeprecationWarning
+
+-  (`#651 <https://github.com/kevinbowen777/django-todo/651>`_): Fix CentralCovContextWarning
+
+-  (`#653 <https://github.com/kevinbowen777/django-todo/653>`_): Update werkzeug to 3.1.9
+
+-  (`#653 <https://github.com/kevinbowen777/django-todo/653>`_): Update djlint to 1.46.4
+
+-  (`#653 <https://github.com/kevinbowen777/django-todo/653>`_): Update testing for Python 3.14.8, 3.13.16, 3.12.15
+
 django-todo 0.3.7 (2026-09-25)
 ==============================
 
