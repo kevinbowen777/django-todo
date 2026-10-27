@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
@@ -18,7 +20,7 @@ class ToDoList(models.Model):
     )
 
     class Meta:
-        ordering = ["date"]
+        ordering: ClassVar[list[str]] = ["date"]
 
     def __str__(self):
         return self.title
@@ -38,7 +40,7 @@ class ToDoItem(models.Model):
     )
 
     class Meta:
-        ordering = ["due_date"]
+        ordering: ClassVar[list[str]] = ["due_date"]
 
     def __str__(self):
         return f"{self.title}: due {self.due_date}"

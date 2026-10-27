@@ -27,6 +27,38 @@ with advance notice in the **Deprecations** section of releases.
 
 .. towncrier release notes start
 
+django-todo 0.3.9 (2026-10-27)
+==============================
+
+Security updated
+----------------
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update django-allauth to 65.20.1
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update pip to 26.2.2
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update pillow to 13.0.0
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update certifi to 2026.10.23
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update .python-version with 3.14.9, 3.13.17, 3.12.16
+
+
+Improved documentation
+----------------------
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Remove legacy license classifier
+
+
+Contributor-facing changes
+--------------------------
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update nox to 2026.10.20
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update djlint to 1.47.1
+
+-  (`#656 <https://github.com/kevinbowen777/django-todo/656>`_): Update ruff rules & fix reported errors
+
 django-todo 0.3.8 (2026-10-11)
 ==============================
 

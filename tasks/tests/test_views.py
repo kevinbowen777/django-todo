@@ -27,7 +27,7 @@ def test_list_list_view(rf, todolist):
     assert response.status_code == 200
     # assertContains(response, f"{todolist.owner}'s task lists")
     assertContains(response, f"{todolist.title}")
-    assert ToDoList.objects.count(), 1
+    assert ToDoList.objects.count() == 1
 
 
 @pytest.mark.django_db

@@ -5,7 +5,6 @@ pytestmark = pytest.mark.django_db
 
 
 def test_todolist__str__(todolist):
-    assert todolist.__str__() == todolist.title
     assert str(todolist) == todolist.title
 
 
@@ -15,7 +14,6 @@ def test_todolist__get_absolute_url(todolist):
 
 
 def test_todoitem__str__(todoitem):
-    assert todoitem.__str__() == f"{todoitem.title}: due {todoitem.due_date}"
     assert str(todoitem) == f"{todoitem.title}: due {todoitem.due_date}"
 
 
