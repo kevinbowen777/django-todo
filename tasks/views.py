@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse, reverse_lazy
 from django.views.generic import (
@@ -37,7 +39,7 @@ class ItemListView(LoginRequiredMixin, ListView):
 
 class ListCreateView(LoginRequiredMixin, CreateView):
     model = ToDoList
-    fields = ["title"]
+    fields: ClassVar[list[str]] = ["title"]
     template_name = "lists/todolist_new.html"
 
     """
@@ -47,14 +49,15 @@ class ListCreateView(LoginRequiredMixin, CreateView):
     """
 
     def get_context_data(self):
-        context = super(ListCreateView, self).get_context_data()
+        # context = super(ListCreateView, self).get_context_data()
+        context = super().get_context_data()
         context["title"] = "Add a new list"
         return context
 
 
 class ItemCreateView(LoginRequiredMixin, CreateView):
     model = ToDoItem
-    fields = [
+    fields: ClassVar[list[str]] = [
         "todo_list",
         "title",
         "description",
@@ -63,13 +66,15 @@ class ItemCreateView(LoginRequiredMixin, CreateView):
     template_name = "lists/todoitem_new.html"
 
     def get_initial(self):
-        initial_data = super(ItemCreateView, self).get_initial()
+        # initial_data = super(ItemCreateView, self).get_initial()
+        initial_data = super().get_initial()
         todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         initial_data["todo_list"] = todo_list
         return initial_data
 
     def get_context_data(self):
-        context = super(ItemCreateView, self).get_context_data()
+        # context = super(ItemCreateView, self).get_context_data()
+        context = super().get_context_data()
         todo_list = ToDoList.objects.get(id=self.kwargs["list_id"])
         context["todo_list"] = todo_list
         context["title"] = "Create a new item"
@@ -81,7 +86,7 @@ class ItemCreateView(LoginRequiredMixin, CreateView):
 
 class ItemUpdateView(LoginRequiredMixin, UpdateView):
     model = ToDoItem
-    fields = [
+    fields: ClassVar[list[str]] = [
         "todo_list",
         "title",
         "description",
@@ -90,7 +95,8 @@ class ItemUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "lists/todoitem_new.html"
 
     def get_context_data(self):
-        context = super(ItemUpdateView, self).get_context_data()
+        # context = super(ItemUpdateView, self).get_context_data()
+        context = super().get_context_data()
         context["todo_list"] = self.object.todo_list
         context["title"] = "Edit item"
         return context
